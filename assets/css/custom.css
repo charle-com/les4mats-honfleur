@@ -107,6 +107,29 @@ section {
 .container {
   max-width: 100%;
   overflow-x: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 img, video, iframe {
@@ -234,9 +257,12 @@ p {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgba(99, 142, 174, 0.85) 0%, rgba(74, 109, 138, 0.85) 100%), url('../facade.jpeg') center center / cover no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   position: relative;
   padding: var(--spacing-lg) 0;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -265,6 +291,19 @@ p {
   font-size: 0.9375rem;
   font-weight: 300;
   margin-bottom: var(--spacing-lg);
+}
+
+/* Centrer le bouton dans le hero */
+.hero-premium .btn-premium {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-premium .text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Sections Premium */
@@ -414,6 +453,7 @@ p {
     margin-right: auto !important;
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
+    text-align: center !important;
   }
   
   .d-flex.gap-3 .btn-premium,
@@ -423,6 +463,17 @@ p {
     max-width: 300px !important;
     margin: 0.5rem auto !important;
     display: block;
+    text-align: center !important;
+  }
+  
+  /* Spécifique pour menu.html */
+  .spacing-vertical-large.d-flex.justify-content-center .btn-premium,
+  .text-center.spacing-vertical-large.d-flex.justify-content-center .btn-premium {
+    display: block !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0.5rem auto !important;
+    text-align: center !important;
   }
   
   .d-flex.gap-3,
@@ -439,6 +490,7 @@ p {
     margin-left: auto !important;
     margin-right: auto !important;
     display: block !important;
+    text-align: center !important;
   }
   
   /* Supprimer les marges sur mobile */
@@ -456,6 +508,7 @@ p {
   .text-center a.btn-premium {
     display: inline-block !important;
     margin: 0.5rem auto !important;
+    text-align: center !important;
   }
 }
 
