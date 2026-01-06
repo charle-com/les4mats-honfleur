@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: [BASE_URL]/sitemap.xml
+Sitemap: https://charlesneveu.github.io/les4mats-honfleur/sitemap.xml
 
