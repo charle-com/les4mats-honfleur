@@ -321,7 +321,9 @@ p {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: visible;
   box-sizing: border-box;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -334,6 +336,7 @@ p {
   background-color: var(--color-bg-light);
   overflow-x: hidden;
   overflow-y: visible;
+  position: relative;
 }
 
 /* Séparateurs */
