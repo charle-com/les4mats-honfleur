@@ -1026,6 +1026,40 @@ p {
   }
 }
 
+/* PDF Viewer pour le menu */
+.pdf-viewer-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: var(--color-bg-light);
+  box-shadow: var(--shadow-subtle);
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .pdf-viewer {
+    height: 70vh;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pdf-viewer {
+    height: 60vh;
+    min-height: 400px;
+  }
+}
+
 /* Styles pour la page équipe */
 .equipe-image-wrapper {
   position: relative;
