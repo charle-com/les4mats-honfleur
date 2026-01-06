@@ -292,6 +292,27 @@ p {
 
 /* Cacher Instagram dans le menu mobile */
 @media (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+  
+  .navbar-collapse .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .navbar-collapse .nav-item {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .navbar-collapse .nav-link {
+    text-align: center !important;
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+  
   .navbar-collapse .d-flex.align-items-center.gap-3 > a[aria-label="Instagram"],
   .navbar-collapse .d-flex.align-items-center.gap-3 > a[href*="instagram"] {
     display: none !important;
@@ -306,6 +327,7 @@ p {
   .navbar-collapse .btn-premium {
     width: 100%;
     max-width: 250px;
+    text-align: center;
   }
 }
 
