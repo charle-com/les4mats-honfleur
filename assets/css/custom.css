@@ -102,13 +102,21 @@ a[aria-label] {
 section {
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .container {
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: visible;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.section-premium,
+.section-premium-alt {
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 @media (min-width: 576px) {
@@ -323,6 +331,8 @@ p {
 
 .section-premium-alt {
   background-color: var(--color-bg-light);
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 /* Séparateurs */
