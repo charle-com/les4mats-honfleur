@@ -1036,6 +1036,7 @@ p {
   overflow: hidden;
   background-color: var(--color-bg-light);
   box-shadow: var(--shadow-subtle);
+  position: relative;
 }
 
 .pdf-viewer {
@@ -1044,6 +1045,11 @@ p {
   min-height: 600px;
   border: none;
   display: block;
+  cursor: pointer;
+}
+
+.pdf-viewer:hover {
+  opacity: 0.98;
 }
 
 @media (max-width: 768px) {
@@ -1057,6 +1063,10 @@ p {
   .pdf-viewer {
     height: 60vh;
     min-height: 400px;
+  }
+  
+  .pdf-viewer-wrapper {
+    border-width: 1px;
   }
 }
 
