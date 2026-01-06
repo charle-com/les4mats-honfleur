@@ -259,12 +259,12 @@ p {
   border-radius: 1px;
   margin: 4px 0;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .navbar-toggler:not(.collapsed) .top-bar {
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
-  margin-top: 8px;
+  transform: rotate(45deg) translate(0, 6px);
+  transform-origin: center center;
 }
 
 .navbar-toggler:not(.collapsed) .middle-bar {
@@ -272,14 +272,13 @@ p {
 }
 
 .navbar-toggler:not(.collapsed) .bottom-bar {
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
-  margin-top: -8px;
+  transform: rotate(-45deg) translate(0, -6px);
+  transform-origin: center center;
 }
 
 .navbar-toggler.collapsed .top-bar {
-  transform: rotate(0);
-  margin-top: 0;
+  transform: rotate(0) translate(0, 0);
+  transform-origin: center center;
 }
 
 .navbar-toggler.collapsed .middle-bar {
@@ -287,8 +286,8 @@ p {
 }
 
 .navbar-toggler.collapsed .bottom-bar {
-  transform: rotate(0);
-  margin-top: 0;
+  transform: rotate(0) translate(0, 0);
+  transform-origin: center center;
 }
 
 /* Cacher Instagram dans le menu mobile */
