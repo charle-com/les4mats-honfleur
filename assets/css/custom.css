@@ -240,6 +240,57 @@ p {
   opacity: 1;
 }
 
+/* Animation Burger to Cross */
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+  padding: 4px 8px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 1px;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:not(.collapsed) .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+  margin-top: 8px;
+}
+
+.navbar-toggler:not(.collapsed) .middle-bar {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+  margin-top: -8px;
+}
+
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+  margin-top: 0;
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+  margin-top: 0;
+}
+
 /* Cacher Instagram dans le menu mobile */
 @media (max-width: 991px) {
   .navbar-collapse .d-flex.align-items-center.gap-3 > a[aria-label="Instagram"],
