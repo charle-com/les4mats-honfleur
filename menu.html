@@ -1,520 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu - Les 4 Mats | Restaurant à Honfleur</title>
-  <link rel="icon" type="image/webp" href="assets/logo.webp">
-  <link rel="shortcut icon" type="image/webp" href="assets/logo.webp">
-  <link rel="apple-touch-icon" href="assets/logo.webp">
-  <meta name="description" content="Découvrez le menu du restaurant Les 4 Mats à Honfleur. Fruits de mer, plats, desserts et glaces dans un cadre familial et convivial.">
-  <link rel="canonical" href="https://charlesneveu.github.io/les4mats-honfleur/menu.html">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="Menu - Les 4 Mats Restaurant à Honfleur">
-  <meta property="og:description" content="Découvrez le menu du restaurant Les 4 Mats à Honfleur. Fruits de mer, plats, desserts et glaces.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://charlesneveu.github.io/les4mats-honfleur/menu.html">
-  <meta property="og:locale" content="fr_FR">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Menu - Les 4 Mats Restaurant à Honfleur">
-  <meta name="twitter:description" content="Découvrez le menu du restaurant Les 4 Mats à Honfleur.">
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/custom.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La carte · Les 4 Mâts, Honfleur</title>
+<meta name="description" content="Carte du restaurant Les 4 Mâts à Honfleur. Poissons du jour, plateaux de fruits de mer, entrées, plats, desserts.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/webp" href="assets/logo.webp">
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-  
-  <!-- Header Minimal -->
-  <nav class="navbar navbar-expand-lg navbar-premium sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/logo.webp" alt="Logo Les 4 Mats - Restaurant Café à Honfleur" height="45">
-      </a>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="menu.html">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="equipe.html">L'Équipe</a>
-          </li>
-        </ul>
-        <div class="d-flex align-items-center gap-3">
-          <a href="https://www.instagram.com/restaurant_4mats/" target="_blank" rel="noopener" class="text-decoration-none" aria-label="Instagram">
-            <img src="assets/svg/instagram.svg" alt="Instagram" style="width: 20px; height: 20px; color: var(--color-text);" class="instagram-logo">
-          </a>
-          <a href="tel:+33231816191" class="btn-premium btn-premium-primary">Réserver</a>
-        </div>
-      </div>
-    </div>
+
+<header class="site-header" id="siteHeader">
+  <a href="index.html" class="brand"><em>Les</em> 4 Mâts</a>
+  <nav class="nav">
+    <a href="index.html#lieu">Le lieu</a>
+    <a href="menu.html">La carte</a>
+    <a href="equipe.html">L'équipage</a>
+    <a href="contact.html">Contact</a>
   </nav>
+  <a href="contact.html" class="cta">Réserver →</a>
+  <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
 
-  <main id="main-content">
-    <!-- Hero Éditorial -->
-    <section class="hero-premium">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center text-white">
-            <h1>Notre Menu</h1>
-            <p class="hero-subtitle">Découvrez nos spécialités</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <div class="nav-overlay__links">
+    <a href="index.html#lieu">Le <em>lieu</em></a>
+    <a href="index.html#carte">La <em>carte</em></a>
+    <a href="index.html#equipage">L'<em>équipage</em></a>
+    <a href="index.html#carnet">Le <em>carnet</em></a>
+    <a href="index.html#contact"><em>Contact</em></a>
+    <a href="index.html#reserver"><em>Réserver →</em></a>
+  </div>
+  <div class="nav-overlay__foot">
+    <span>4 rue de la Ville · 14600 Honfleur</span>
+    <a href="tel:+33231000000">02 31 00 00 00</a>
+    <a href="mailto:bonjour@les4mats.fr">bonjour@les4mats.fr</a>
+  </div>
+</nav>
 
-    <section class="section-premium">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <p class="text-center text-premium-muted mb-5">Tous nos plats sont faits maison, à l'exception de nos glaces/sorbets et des escargots (issus de produits artisanaux normands). Nos viandes sont d'origine française. N'hésitez pas à demander la liste des allergènes.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Menu PDF Viewer -->
-    <section class="section-premium section-premium-alt">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div class="pdf-viewer-wrapper">
-              <iframe src="assets/Menu_4_mats.pdf#toolbar=1&navpanes=0&scrollbar=1&zoom=page-fit&view=FitH" class="pdf-viewer" title="Menu du restaurant Les 4 Mats" allowfullscreen></iframe>
-            </div>
-            <div class="text-center mt-4">
-              <a href="assets/Menu_4_mats.pdf" download="Menu_Les_4_Mats.pdf" class="btn-premium btn-premium-outline-dark">Télécharger le menu (PDF)</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ancien menu HTML (caché pour SEO) -->
-    <section class="section-premium section-premium-alt" style="display: none; visibility: hidden; position: absolute; height: 0; overflow: hidden;">
-      <div class="container">
-
-        <!-- Fruits de mer -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Fruits de mer</h2>
-          <p class="text-premium-muted mb-4">Venez découvrir notre sélection de poissons et crustacés directement sur notre banc d'écailler</p>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Nos Bulots</div>
-                <div class="menu-teaser-item-description">Cuits dans une vague d'anis étoilé - Assiette</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Nos Bigorneaux</div>
-                <div class="menu-teaser-item-description">Mayonnaise maison - Assiette</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Les Huîtres</div>
-                <div class="menu-teaser-item-description">N°3 - du père Gus, Agon-Coutainville - 6 pièces / 9 pièces / 12 pièces</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Les Crevettes Roses</div>
-                <div class="menu-teaser-item-description">Catégorie 20/30, mayonnaise maison - 6 pièces</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Nos Langoustines</div>
-                <div class="menu-teaser-item-description">Catégorie 16/20, mayonnaise maison - 6 pièces</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Nos Tourteaux</div>
-                <div class="menu-teaser-item-description">Mayonnaise maison - Demi / Entier</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Homard bleu</div>
-                <div class="menu-teaser-item-description">Accompagné d'une salade de crudités - Demi / Entier</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Assiette de fruits de mer</div>
-                <div class="menu-teaser-item-description">4 huîtres de Normandie, bulots, crevettes roses, bigorneaux, amande et 2 langoustines</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Plateau Classique</div>
-                <div class="menu-teaser-item-description">6 huîtres n°3, 1/2 tourteau, bulots, bigorneaux, crevettes roses, amande et 3 langoustines</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Plateau Royal</div>
-                <div class="menu-teaser-item-description">6 huîtres n°3, 1/2 homard, bulots, bigorneaux, crevettes roses, amande et 3 langoustines</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <hr class="section-divider">
-
-        <!-- Entrées -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Entrées</h2>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Soupe de poisson</div>
-                <div class="menu-teaser-item-description">Rouille et emmental</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Ceviche de daurade</div>
-                <div class="menu-teaser-item-description">Fruits rouges, citron vert</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Terrine du Chef</div>
-                <div class="menu-teaser-item-description">Moutarde à l'ancienne, pickels</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <hr class="section-divider">
-
-        <!-- Escargots -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Escargots</h2>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">À la bourguignonne</div>
-                <div class="menu-teaser-item-description">Ferme du Galiot - 6 pièces / 12 pièces</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gravlax -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Gravlax</h2>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Gravlax de saumon</div>
-                <div class="menu-teaser-item-description">Crème fouettée à l'aneth</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Salades -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Salades</h2>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Salade Mer</div>
-                <div class="menu-teaser-item-description">Quinoa, pomme, choux, daurade, amande, raisin, avocat</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Salade Veggie</div>
-                <div class="menu-teaser-item-description">Tomates, burrata, basilic</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Salade Terre</div>
-                <div class="menu-teaser-item-description">Salade, œuf mollet, volaille, tomates, croustillant de camembert, avocat</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Moules -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Moules</h2>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Moules marinières</div>
-                <div class="menu-teaser-item-description">Vin blanc, oignon, frites fraîches</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Moules crème d'Isigny</div>
-                <div class="menu-teaser-item-description">Crème fraîche, frites fraîches</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Moules à la Normande</div>
-                <div class="menu-teaser-item-description">Sauce au camembert AOP, vin blanc et oignon, frites fraîches</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Plats -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Plats</h2>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Suprême de volaille</div>
-                <div class="menu-teaser-item-description">Sauce Vallée d'Auge, écrasé de pommes de terre, légumes</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Entrecôte Normande</div>
-                <div class="menu-teaser-item-description">300 g, frites fraîches et légumes - Sauce au choix : tartare, poivre, fromages normands</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Tartare de bœuf au couteau</div>
-                <div class="menu-teaser-item-description">Préparé ou non</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Choucroute de la mer</div>
-                <div class="menu-teaser-item-description">3 différents poissons, sauce crémée, pommes de terre</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Filet de daurade</div>
-                <div class="menu-teaser-item-description">Accompagné de légumes de saison, écrasé de pommes de terre</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Bouillabaisse</div>
-                <div class="menu-teaser-item-description">3 filets de poissons, soupe de poisson, légumes vapeur, rouille</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Homard bleu</div>
-                <div class="menu-teaser-item-description">500 g, selon l'arrivage, servi avec légumes de saison</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <hr class="section-divider">
-
-        <!-- Menu enfant -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Menu enfant</h2>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Entrée</div>
-                <div class="menu-teaser-item-description">Crevettes ou terrine du chef</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Plat</div>
-                <div class="menu-teaser-item-description">Poisson ou volaille - Accompagnement : Légumes ou frites ou purée</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Dessert</div>
-                <div class="menu-teaser-item-description">1 boule de glace ou une salade de fruits</div>
-              </div>
-            </div>
-          </div>
-          <p class="text-premium-muted small mt-4">Le menu enfant est composé d'une entrée, d'un plat et d'un dessert.</p>
-        </div>
-
-        <!-- Desserts -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Desserts</h2>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Assiette de fromages</div>
-                <div class="menu-teaser-item-description">Pont-l'Évêque, camembert, livarot</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Crème brûlée</div>
-                <div class="menu-teaser-item-description"></div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Mousse au chocolat</div>
-                <div class="menu-teaser-item-description"></div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Café gourmand</div>
-                <div class="menu-teaser-item-description"></div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Dessert du moment</div>
-                <div class="menu-teaser-item-description"></div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Tarte Tatin</div>
-                <div class="menu-teaser-item-description"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Le Glacier -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Le Glacier</h2>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Boules de glace / sorbet</div>
-                <div class="menu-teaser-item-description">Choix de parfums - 1 boule / 2 boules / 3 boules - Supplément chantilly disponible</div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-4">
-            <p class="text-premium-muted small mb-0">Parfums disponibles : Chocolat, Caramel, Vanille, Café, Pistache, Menthe chocolat, Rhum raisin, Fraise, Pomme, Mangue, Cassis, Citron, Pêche, Coco</p>
-          </div>
-        </div>
-
-        <!-- Coupes glacées -->
-        <div class="mb-5">
-          <h2 class="mb-4" style="color: var(--color-primary);">Coupes glacées</h2>
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Dame blanche</div>
-                <div class="menu-teaser-item-description">2 boules vanille, chocolat chaud et chantilly</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Chocolat liégeois</div>
-                <div class="menu-teaser-item-description">2 boules chocolat, chocolat chaud et chantilly</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Café liégeois</div>
-                <div class="menu-teaser-item-description">2 boules café, expresso et chantilly</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Le Vacherin</div>
-                <div class="menu-teaser-item-description">1 boule vanille, 1 boule fraise, meringues, chantilly et fruits rouges</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">La Mont Blanc</div>
-                <div class="menu-teaser-item-description">2 boules vanille, chantilly, meringues et crème de marrons</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Colonel</div>
-                <div class="menu-teaser-item-description">1 boule sorbet citron et vodka</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">Trou normand</div>
-                <div class="menu-teaser-item-description">1 boule sorbet pomme et calvados</div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="menu-teaser-item">
-                <div class="menu-teaser-item-name">After eight</div>
-                <div class="menu-teaser-item-description">2 boules menthe chocolat et Get 27</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center spacing-vertical-large d-flex justify-content-center">
-          <a href="tel:+33231816191" class="btn-premium btn-premium-primary">Réserver une table</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer Premium -->
-  <footer class="footer-premium">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-md-4">
-          <h3>Les 4 Mats</h3>
-          <p>Restaurant Café à Honfleur</p>
-          <p>4 Rue de la Ville<br>14600 Honfleur, France</p>
-        </div>
-        <div class="col-md-4">
-          <h3>Contact</h3>
-          <p>Téléphone : <a href="tel:+33231816191">+33 2 31 81 61 91</a></p>
-          <p><a href="https://www.instagram.com/restaurant_4mats/" target="_blank" rel="noopener" class="d-inline-flex align-items-center gap-2"><img src="assets/svg/instagram.svg" alt="Instagram" class="instagram-logo" style="width: 18px; height: 18px;">Instagram</a></p>
-        </div>
-        <div class="col-md-4">
-          <h3>Horaires</h3>
-          <p>Lundi : Fermé<br>Mardi : Fermé<br>Mercredi - Dimanche : 10:00 - 22:00</p>
-        </div>
-      </div>
-      <div class="footer-premium-bottom">
-        <a href="https://charlesneveu.github.io/les4mats-honfleur/mentions-legales.html">Mentions légales</a>
-        <a href="https://charlesneveu.github.io/les4mats-honfleur/confidentialite.html">Confidentialité</a>
+<section class="carte" style="padding-top: 140px;">
+  <div class="wrap">
+    <div class="section-head reveal is-visible">
+      <span class="num">N° 02</span>
+      <div class="titles">
+        <h2>La carte <em>change avec la marée.</em></h2>
+        <p>Cette page évolue avec les arrivages. La version papier, remise en salle, fait foi. Le menu complet est également disponible en PDF ci-dessous.</p>
       </div>
     </div>
-  </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
+    <div class="carte__grid">
+      <article class="plat plat--a">
+        <div class="plat__media">
+          <picture><source srcset="assets/plateau_de_fruit_de_mer.webp" type="image/webp"><img src="assets/plateau_de_fruit_de_mer.jpeg" alt="Plateau de fruits de mer"></picture>
+        </div>
+        <div class="plat__meta"><span class="label">Signature · Partage</span></div>
+        <h3 class="plat__name">Le Grand <em>Plateau</em></h3>
+        <p class="plat__desc">Huîtres de Normandie, tourteau, crevettes bouquet, bulots, langoustines. Pour deux.</p>
+      </article>
+
+      <article class="plat plat--b">
+        <div class="plat__media">
+          <picture><source srcset="assets/saumon.webp" type="image/webp"><img src="assets/saumon.jpeg" alt="Saumon"></picture>
+        </div>
+        <div class="plat__meta"><span class="label">Poisson du jour</span></div>
+        <h3 class="plat__name">Saumon <em>rôti</em>, beurre noisette</h3>
+        <p class="plat__desc">Pavé épais cuit à la peau, beurre moussé, citron confit, légumes de la côte.</p>
+      </article>
+
+      <article class="plat plat--c">
+        <div class="plat__media">
+          <picture><source srcset="assets/salade_de_la_mer.webp" type="image/webp"><img src="assets/salade_de_la_mer.jpeg" alt="Salade de la mer"></picture>
+        </div>
+        <div class="plat__meta"><span class="label">Entrée · Fraîcheur</span></div>
+        <h3 class="plat__name">Salade de <em>la mer</em></h3>
+        <p class="plat__desc">Crevettes, avocat, pamplemousse, jeunes pousses, vinaigrette aux agrumes.</p>
+      </article>
+
+      <article class="plat plat--d">
+        <div class="plat__media">
+          <picture><source srcset="assets/desserts.webp" type="image/webp"><img src="assets/desserts.jpeg" alt="Desserts"></picture>
+        </div>
+        <div class="plat__meta"><span class="label">Dessert</span></div>
+        <h3 class="plat__name">Pâtisseries <em>maison</em></h3>
+        <p class="plat__desc">Au gré des fruits de saison et de l'humeur du chef. Café gourmand en option.</p>
+      </article>
+    </div>
+
+    <div class="carte__footer">
+      <a href="assets/Menu_4_mats.pdf" class="cta" style="color: var(--ink);" target="_blank" rel="noopener">
+        Télécharger la carte complète en PDF ↓
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p class="site-footer__brand"><em>Les</em><br>4 Mâts</p>
+      <p class="site-footer__tag">Table marine à Honfleur. Pêche du matin, service du soir.</p>
+    </div>
+    <div>
+      <h4>Visiter</h4>
+      <ul>
+        <li><a href="index.html#lieu">Le lieu</a></li>
+        <li><a href="menu.html">La carte</a></li>
+        <li><a href="equipe.html">L'équipage</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Réserver</h4>
+      <ul>
+        <li><a href="tel:+33231000000">02 31 00 00 00</a></li>
+        <li><a href="mailto:bonjour@les4mats.fr">bonjour@les4mats.fr</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Adresse</h4>
+      <ul><li>4 rue de la Ville</li><li>14600 Honfleur</li></ul>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© 2026 Les 4 Mâts</span>
+    <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,79 @@
+// Les 4 Mâts · comportements UI
+(() => {
+  const body = document.body;
+  const header = document.getElementById('siteHeader') || document.querySelector('.site-header');
+  const burger = document.querySelector('.burger');
+  const overlay = document.getElementById('navOverlay');
+
+  // --- Header state on scroll ---
+  if (header) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (window.scrollY > 40) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  // --- Burger menu toggle ---
+  function closeMenu() {
+    body.classList.remove('menu-open');
+    if (burger) burger.setAttribute('aria-expanded', 'false');
+    if (overlay) overlay.setAttribute('aria-hidden', 'true');
+  }
+  function openMenu() {
+    body.classList.add('menu-open');
+    if (burger) burger.setAttribute('aria-expanded', 'true');
+    if (overlay) overlay.setAttribute('aria-hidden', 'false');
+  }
+  if (burger) {
+    burger.addEventListener('click', () => {
+      if (body.classList.contains('menu-open')) closeMenu();
+      else openMenu();
+    });
+  }
+  // close on overlay link click
+  if (overlay) {
+    overlay.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', closeMenu);
+    });
+  }
+  // close on Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && body.classList.contains('menu-open')) closeMenu();
+  });
+
+  // --- Reveal on scroll ---
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+  }
+
+  // --- Smooth scroll for in-page anchors with header offset compensation ---
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id === '#' || id.length < 2) return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.pageYOffset - 10;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+})();
