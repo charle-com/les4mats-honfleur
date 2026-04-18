@@ -64,6 +64,48 @@
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
 
+  // --- Dynamic reservation moment ---
+  // Maj le texte de la section Réserver selon l'heure et le jour.
+  // Ouvert mardi → dimanche · fermé lundi · Déjeuner 12h-14h30 · Dîner 19h-23h
+  function getReservationMoment() {
+    const now = new Date();
+    const day = now.getDay();          // 0 dim, 1 lun, 2 mar, ... 6 sam
+    const t = now.getHours() + now.getMinutes() / 60;
+
+    // Lundi : toute la journée, resto fermé
+    if (day === 1) return "cette semaine";
+
+    // Dimanche tard : lundi fermé, on propose mardi
+    if (day === 0 && t >= 22.5) return "pour mardi";
+
+    // Samedi tard : lendemain = dimanche (ouvert)
+    // Jours ouverts mardi→samedi : lendemain ouvert normal
+    // Dimanche classique : on gère via la règle day=0 au-dessus
+
+    // Avant 11h : encore temps pour le déjeuner
+    if (t < 11) return "ce midi";
+
+    // 11h → 14h : service du déjeuner en cours/imminent
+    if (t < 14) return "ce midi";
+
+    // 14h → 22h : on propose le dîner du soir même
+    if (t < 22) return "ce soir";
+
+    // Après 22h : service terminé, on propose demain
+    // (sauf dimanche gerée ci-dessus)
+    return "pour demain";
+  }
+
+  function updateReservationCTA() {
+    const moment = getReservationMoment();
+    document.querySelectorAll('[data-reservation-moment]').forEach((el) => {
+      el.textContent = moment + ".";
+    });
+  }
+  updateReservationCTA();
+  // Refresh toutes les 5 minutes au cas où la page reste ouverte
+  setInterval(updateReservationCTA, 5 * 60 * 1000);
+
   // --- Smooth scroll for in-page anchors with header offset compensation ---
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
