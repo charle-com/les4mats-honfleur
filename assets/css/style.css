@@ -4,7 +4,7 @@
   --muted:    #6B665C;
   --faint:    #9E988A;
   --line:     #D6CFBD;
-  --accent:   #8B2244;   --accent-2: #B85473;   --marine:   #A3C5CB;
+  --accent:   #2A5C6E;   --accent-2: #6D9BAA;   --marine:   #8B2244;
   --cream-hi: #FAF6EC;
 
   --ff-display: "Fraunces", "Times New Roman", serif;
@@ -342,8 +342,10 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
 
 .intro {
   background: var(--bg-mist);
-  padding: clamp(28px, 4vw, 50px) 0;
+  padding: clamp(22px, 3vw, 42px) 0;
   overflow: hidden;
+  border-top: 1px solid rgba(42, 92, 110, 0.08);
+  border-bottom: 1px solid rgba(42, 92, 110, 0.08);
 }
 .intro__track {
   display: flex;
@@ -1297,8 +1299,9 @@ body.menu-open .nav-overlay {
   .hero__tagline { font-size: 16px; line-height: 1.4; }
   .hero__meta { font-size: 10px; line-height: 1.95; }
 
-  .intro { padding: 46px 0; }
-  .intro__track { font-size: clamp(24px, 7vw, 40px); gap: 28px; }
+  .intro { padding: 24px 0; }
+  .intro__track { font-size: clamp(18px, 5vw, 28px); gap: 20px; font-weight: 400; }
+  .intro__track .dot { width: 5px; height: 5px; margin: 0 8px 6px; }
 
   .section-head {
     grid-template-columns: 1fr;
