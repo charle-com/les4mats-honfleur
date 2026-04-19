@@ -172,23 +172,14 @@
         "hasMenuSection": [
           {
             "@type": "MenuSection",
-            "name": "Signatures",
+            "name": "Raw bar",
             "hasMenuItem": [
               {
                 "@type": "MenuItem",
-                "name": "The Grand Platter",
-                "description": "Normandy oysters, brown crab, bouquet prawns, whelks, langoustines. For two."
-              }
-            ]
-          },
-          {
-            "@type": "MenuSection",
-            "name": "Fish of the day",
-            "hasMenuItem": [
-              {
-                "@type": "MenuItem",
-                "name": "Roasted salmon, brown butter",
-                "description": "Thick fillet cooked skin on, foaming butter, candied lemon, coastal vegetables."
+                "name": "The Royal Platter",
+                "description": "6 oysters n°3, half blue lobster, whelks, periwinkles, prawns, almond clams and 3 langoustines. To share.",
+                "offers": { "@type": "Offer", "price": "59", "priceCurrency": "EUR" },
+                "suitableForDiet": "https://schema.org/PescatarianDiet"
               }
             ]
           },
@@ -198,8 +189,21 @@
             "hasMenuItem": [
               {
                 "@type": "MenuItem",
-                "name": "Seafood salad",
-                "description": "Prawns, avocado, grapefruit, young leaves, citrus vinaigrette."
+                "name": "Salmon gravlax",
+                "description": "Nordic-cured salmon, whipped cream with dill.",
+                "offers": { "@type": "Offer", "price": "12", "priceCurrency": "EUR" }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Salads",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Sea Salad",
+                "description": "Quinoa, sea bream, apple, cabbage, avocado, almonds, raisins.",
+                "offers": { "@type": "Offer", "price": "18", "priceCurrency": "EUR" }
               }
             ]
           },
@@ -209,8 +213,9 @@
             "hasMenuItem": [
               {
                 "@type": "MenuItem",
-                "name": "Tarte Tatin, Isigny crème fraîche",
-                "description": "Caramelised Pays d'Auge apples, puff pastry, thick crème fraîche."
+                "name": "Tarte Tatin",
+                "description": "Caramelised apples, flaky puff pastry. Served warm.",
+                "offers": { "@type": "Offer", "price": "9", "priceCurrency": "EUR" }
               }
             ]
           }
@@ -416,7 +421,7 @@
       <span class="num">N° 02</span>
       <div class="titles">
         <h2>The menu <em>shifts with the tide.</em></h2>
-        <p>Four moments, hand-picked. The full menu changes with the catch, ask for it in the dining room or download it below.</p>
+        <p>Four plates in pictures, but the menu goes well beyond: raw bar and seafood platters, mussels three ways, Normandy meats, homemade desserts. Discover the full card in the dining room or download it below.</p>
       </div>
     </div>
 
@@ -425,48 +430,48 @@
         <div class="plat__media">
           <picture>
             <source srcset="../assets/plateau_de_fruit_de_mer.webp" type="image/webp">
-            <img src="../assets/plateau_de_fruit_de_mer.jpeg" alt="Seafood platter" loading="lazy">
+            <img src="../assets/plateau_de_fruit_de_mer.jpeg" alt="The Royal Platter, seafood at Les 4 Mâts" loading="lazy">
           </picture>
         </div>
-        <div class="plat__meta"><span class="label">Signature · to share</span></div>
-        <h3 class="plat__name">The Grand <em>Platter</em></h3>
-        <p class="plat__desc">Normandy oysters, brown crab, bouquet prawns, whelks, langoustines. For two.</p>
+        <div class="plat__meta"><span class="label">Signature · €59</span></div>
+        <h3 class="plat__name">The Royal <em>Platter</em></h3>
+        <p class="plat__desc">6 oysters n°3, half blue lobster, whelks, periwinkles, prawns, almond clams and 3 langoustines. To share.</p>
       </article>
 
       <article class="plat plat--b reveal" style="--delay: .1s;">
         <div class="plat__media">
           <picture>
             <source srcset="../assets/saumon.webp" type="image/webp">
-            <img src="../assets/saumon.jpeg" alt="Roasted salmon" loading="lazy">
+            <img src="../assets/saumon.jpeg" alt="Salmon gravlax with dill cream" loading="lazy">
           </picture>
         </div>
-        <div class="plat__meta"><span class="label">Fish of the day</span></div>
-        <h3 class="plat__name">Roasted <em>salmon</em>, brown butter</h3>
-        <p class="plat__desc">Thick fillet cooked skin on, foaming butter, candied lemon, coastal vegetables.</p>
+        <div class="plat__meta"><span class="label">Starter · €12</span></div>
+        <h3 class="plat__name">Salmon <em>gravlax</em></h3>
+        <p class="plat__desc">Nordic-cured salmon, whipped cream with dill.</p>
       </article>
 
       <article class="plat plat--c reveal" style="--delay: .15s;">
         <div class="plat__media">
           <picture>
             <source srcset="../assets/salade_de_la_mer.webp" type="image/webp">
-            <img src="../assets/salade_de_la_mer.jpeg" alt="Seafood salad" loading="lazy">
+            <img src="../assets/salade_de_la_mer.jpeg" alt="Sea Salad with sea bream and citrus" loading="lazy">
           </picture>
         </div>
-        <div class="plat__meta"><span class="label">Starter · fresh</span></div>
-        <h3 class="plat__name">Seafood <em>salad</em></h3>
-        <p class="plat__desc">Prawns, avocado, grapefruit, young leaves, citrus vinaigrette.</p>
+        <div class="plat__meta"><span class="label">Salad · €18</span></div>
+        <h3 class="plat__name">Sea <em>Salad</em></h3>
+        <p class="plat__desc">Quinoa, sea bream, apple, cabbage, avocado, almonds, raisins.</p>
       </article>
 
       <article class="plat plat--d reveal" style="--delay: .2s;">
         <div class="plat__media">
           <picture>
             <source srcset="../assets/tarte_tatin.webp" type="image/webp">
-            <img src="../assets/tarte_tatin.jpeg" alt="Tarte tatin" loading="lazy">
+            <img src="../assets/tarte_tatin.jpeg" alt="Tarte Tatin caramelised apples" loading="lazy">
           </picture>
         </div>
-        <div class="plat__meta"><span class="label">Dessert · tradition</span></div>
-        <h3 class="plat__name">Tatin, Isigny <em>crème fraîche</em></h3>
-        <p class="plat__desc">Pays d'Auge apples, caramelised, flaky puff pastry, thick crème fraîche.</p>
+        <div class="plat__meta"><span class="label">Dessert · €9</span></div>
+        <h3 class="plat__name">Tarte <em>Tatin</em></h3>
+        <p class="plat__desc">Caramelised apples, flaky puff pastry. Served warm.</p>
       </article>
     </div>
 
