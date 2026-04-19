@@ -1126,23 +1126,24 @@ body.menu-open .nav-overlay {
 
 .nav-overlay__close {
   position: absolute;
-  top: 22px;
-  right: var(--gutter);
-  width: 44px;
-  height: 44px;
+  top: 18px;
+  right: var(--gutter, 24px);
+  width: 48px;
+  height: 48px;
   padding: 0;
-  border: 0;
-  background: transparent;
+  border: 1px solid rgba(244, 239, 227, 0.25);
+  border-radius: 999px;
+  background: rgba(244, 239, 227, 0.08);
   cursor: pointer;
-  z-index: 2;
-  display: none;
+  z-index: 10;
+  display: block;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease);
 }
-body.menu-open .nav-overlay__close { display: block; }
 .nav-overlay__close span {
   position: absolute;
   top: 50%;
-  left: 8px;
-  right: 8px;
+  left: 14px;
+  right: 14px;
   height: 2px;
   background: var(--cream-hi);
   border-radius: 2px;
@@ -1151,6 +1152,11 @@ body.menu-open .nav-overlay__close { display: block; }
 }
 .nav-overlay__close span:nth-child(1) { transform: translateY(-50%) rotate(45deg); }
 .nav-overlay__close span:nth-child(2) { transform: translateY(-50%) rotate(-45deg); }
+.nav-overlay__close:hover,
+.nav-overlay__close:focus-visible {
+  background: rgba(244, 239, 227, 0.18);
+  border-color: rgba(244, 239, 227, 0.5);
+}
 .nav-overlay__close:hover span,
 .nav-overlay__close:focus-visible span { background: var(--accent-2); }
 
