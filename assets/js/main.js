@@ -64,36 +64,25 @@
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
 
-  // --- Dynamic reservation moment ---
-  // Maj le texte de la section Réserver selon l'heure et le jour.
-  // Ouvert mardi → dimanche · fermé lundi · Déjeuner 12h-14h30 · Dîner 19h-23h
+  // --- Dynamic reservation moment (bilingue FR/EN) ---
+  // Open Tuesday→Sunday · closed Monday · Lunch 12-14:30 · Dinner 19-23
+  const LANG = (document.documentElement.lang || 'fr').toLowerCase().startsWith('en') ? 'en' : 'fr';
+  const MOMENTS = {
+    fr: { lunch: "ce midi", tonight: "ce soir", tomorrow: "pour demain", tuesday: "pour mardi", week: "cette semaine" },
+    en: { lunch: "for lunch today", tonight: "tonight", tomorrow: "tomorrow", tuesday: "on Tuesday", week: "this week" },
+  };
+
   function getReservationMoment() {
     const now = new Date();
-    const day = now.getDay();          // 0 dim, 1 lun, 2 mar, ... 6 sam
+    const day = now.getDay();
     const t = now.getHours() + now.getMinutes() / 60;
+    const m = MOMENTS[LANG];
 
-    // Lundi : toute la journée, resto fermé
-    if (day === 1) return "cette semaine";
-
-    // Dimanche tard : lundi fermé, on propose mardi
-    if (day === 0 && t >= 22.5) return "pour mardi";
-
-    // Samedi tard : lendemain = dimanche (ouvert)
-    // Jours ouverts mardi→samedi : lendemain ouvert normal
-    // Dimanche classique : on gère via la règle day=0 au-dessus
-
-    // Avant 11h : encore temps pour le déjeuner
-    if (t < 11) return "ce midi";
-
-    // 11h → 14h : service du déjeuner en cours/imminent
-    if (t < 14) return "ce midi";
-
-    // 14h → 22h : on propose le dîner du soir même
-    if (t < 22) return "ce soir";
-
-    // Après 22h : service terminé, on propose demain
-    // (sauf dimanche gerée ci-dessus)
-    return "pour demain";
+    if (day === 1) return m.week;                   // Monday : closed
+    if (day === 0 && t >= 22.5) return m.tuesday;   // Sunday late : next open = Tuesday
+    if (t < 14) return m.lunch;                     // before 14 : lunch
+    if (t < 22) return m.tonight;                   // 14→22 : dinner
+    return m.tomorrow;                              // late : tomorrow
   }
 
   function updateReservationCTA() {
@@ -103,7 +92,6 @@
     });
   }
   updateReservationCTA();
-  // Refresh toutes les 5 minutes au cas où la page reste ouverte
   setInterval(updateReservationCTA, 5 * 60 * 1000);
 
   // --- Smooth scroll for in-page anchors with header offset compensation ---
