@@ -1037,18 +1037,19 @@ body.menu-open .burger span:nth-child(3) { top: 22px; transform: rotate(-45deg);
 .nav-overlay {
   position: fixed;
   inset: 0;
+  height: 100vh;
+  height: 100svh;
   background: var(--bg-deep);
   color: var(--cream-hi);
   z-index: 105;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 100px var(--gutter) 40px;
+  justify-content: space-between;
+  padding: 80px var(--gutter) 32px;
   transform: translateX(100%);
   transition: transform 0.5s var(--ease);
   visibility: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
   overscroll-behavior: contain;
 }
 body.menu-open {
@@ -1066,20 +1067,19 @@ body.menu-open .nav-overlay {
 .nav-overlay__links {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 60px;
+  gap: 2px;
 }
 .nav-overlay__links a {
   font-family: var(--ff-display);
   font-weight: 300;
   font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
-  font-size: clamp(42px, 12vw, 64px);
-  line-height: 1.05;
+  font-size: clamp(32px, 9vw, 56px);
+  line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--cream-hi);
   transition: color 0.3s var(--ease), transform 0.3s var(--ease);
   display: block;
-  padding: 6px 0;
+  padding: 2px 0;
 }
 .nav-overlay__links a:active,
 .nav-overlay__links a:hover {
@@ -1093,14 +1093,15 @@ body.menu-open .nav-overlay {
 }
 .nav-overlay__foot {
   border-top: 1px solid rgba(255,255,255,0.12);
-  padding-top: 24px;
+  padding-top: 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   font-family: var(--ff-body);
   font-size: 13px;
   color: rgba(255,255,255,0.7);
-  line-height: 1.6;
+  line-height: 1.5;
+  flex-shrink: 0;
 }
 .nav-overlay__foot a {
   color: var(--accent-2);
@@ -1109,8 +1110,8 @@ body.menu-open .nav-overlay {
 .nav-overlay__lang {
   display: flex;
   gap: 16px;
-  margin-top: 20px;
-  padding-top: 20px;
+  margin-top: 12px;
+  padding-top: 14px;
   border-top: 1px solid rgba(255,255,255,0.12);
 }
 .nav-overlay__lang a {
@@ -1305,6 +1306,15 @@ body.menu-open .nav-overlay {
   .hero__title { font-size: clamp(54px, 20vw, 80px); }
   .section-head .titles h2 { font-size: clamp(30px, 10vw, 40px); }
   .reserver h2 { font-size: clamp(44px, 16vw, 72px); }
+  .nav-overlay { padding-top: 72px; padding-bottom: 24px; }
+  .nav-overlay__links a { font-size: clamp(28px, 8vw, 40px); padding: 0; }
+  .nav-overlay__foot { font-size: 12px; padding-top: 14px; }
+}
+
+/* Landscape mobile : on reactive le scroll si le contenu deborde reellement */
+@media (max-height: 520px) and (orientation: landscape) {
+  .nav-overlay { overflow-y: auto; justify-content: flex-start; padding-top: 60px; }
+  .nav-overlay__links a { font-size: 28px; }
 }
 
 /* Reduced motion */
