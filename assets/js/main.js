@@ -1,11 +1,8 @@
-// Les 4 Mâts · comportements UI
 (() => {
   const body = document.body;
   const header = document.getElementById('siteHeader') || document.querySelector('.site-header');
   const burger = document.querySelector('.burger');
   const overlay = document.getElementById('navOverlay');
-
-  // --- Header state on scroll ---
   if (header) {
     let ticking = false;
     window.addEventListener('scroll', () => {
@@ -19,8 +16,6 @@
       }
     }, { passive: true });
   }
-
-  // --- Burger menu toggle (with scroll lock iOS/Android safe) ---
   let savedScrollY = 0;
   function closeMenu() {
     body.classList.remove('menu-open');
@@ -31,10 +26,8 @@
       overlay.scrollTop = 0;
     }
     window.scrollTo(0, savedScrollY);
-    // Force reflow pour eviter les artefacts de compositing (burger invisible sur Safari mobile)
     if (burger) {
       burger.style.display = 'none';
-      // eslint-disable-next-line no-unused-expressions
       burger.offsetHeight;
       burger.style.display = '';
     }
@@ -52,7 +45,6 @@
       else openMenu();
     });
   }
-  // close on overlay link click
   if (overlay) {
     overlay.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', closeMenu);
@@ -60,12 +52,9 @@
     const closeBtn = overlay.querySelector('.nav-overlay__close');
     if (closeBtn) closeBtn.addEventListener('click', closeMenu);
   }
-  // close on Esc
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && body.classList.contains('menu-open')) closeMenu();
   });
-
-  // --- Reveal on scroll ---
   const revealEls = document.querySelectorAll('.reveal');
   if (revealEls.length && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
@@ -80,9 +69,6 @@
   } else {
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
-
-  // --- Dynamic reservation moment (bilingue FR/EN) ---
-  // Open Tuesday→Sunday · closed Monday · Lunch 12-14:30 · Dinner 19-23
   const LANG = (document.documentElement.lang || 'fr').toLowerCase().startsWith('en') ? 'en' : 'fr';
   const MOMENTS = {
     fr: { lunch: "ce midi", tonight: "ce soir", tomorrow: "pour demain", tuesday: "pour mardi", week: "cette semaine" },
@@ -95,11 +81,11 @@
     const t = now.getHours() + now.getMinutes() / 60;
     const m = MOMENTS[LANG];
 
-    if (day === 1) return m.week;                   // Monday : closed
-    if (day === 0 && t >= 22.5) return m.tuesday;   // Sunday late : next open = Tuesday
-    if (t < 14) return m.lunch;                     // before 14 : lunch
-    if (t < 22) return m.tonight;                   // 14→22 : dinner
-    return m.tomorrow;                              // late : tomorrow
+    if (day === 1) return m.week;
+    if (day === 0 && t >= 22.5) return m.tuesday;
+    if (t < 14) return m.lunch;
+    if (t < 22) return m.tonight;
+    return m.tomorrow;
   }
 
   function updateReservationCTA() {
@@ -110,9 +96,6 @@
   }
   updateReservationCTA();
   setInterval(updateReservationCTA, 5 * 60 * 1000);
-
-  // --- Live open/closed status badge ---
-  // Mardi->dimanche, dejeuner 12-14:30, diner 19-23. Ferme lundi.
   function getLiveStatus() {
     const now = new Date();
     const day = now.getDay();
@@ -137,16 +120,16 @@
     };
     const S = LANG === 'en' ? STATES_EN : STATES_FR;
 
-    if (day === 1) return S.mondayAll;                     // Monday
-    if (day === 0 && t >= 23) return S.sundayNight;        // Sunday late
-    if (day === 2 && t < 12) {                             // Tuesday morning (after Monday closure)
+    if (day === 1) return S.mondayAll;
+    if (day === 0 && t >= 23) return S.sundayNight;
+    if (day === 2 && t < 12) {
       return { state: 'is-soon', text: LANG === 'en' ? 'Opens at 12pm' : 'Ouvre à 12h' };
     }
     if (t < 12) return S.beforeLunch;
     if (t < 14.5) return S.openLunch;
     if (t < 19) return S.between;
     if (t < 23) return S.openDinner;
-    return S.afterLast;                                     // late evening except sunday
+    return S.afterLast;
   }
   function updateLiveStatus() {
     const live = getLiveStatus();
@@ -159,8 +142,6 @@
   }
   updateLiveStatus();
   setInterval(updateLiveStatus, 60 * 1000);
-
-  // --- Smooth scroll for in-page anchors with header offset compensation ---
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href');
