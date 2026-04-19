@@ -1018,18 +1018,25 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
   position: relative;
   z-index: 110;
   cursor: pointer;
-  background: transparent;
+  background: rgba(15, 26, 34, 0.55);
+  border: 1px solid rgba(244, 239, 227, 0.35);
+  border-radius: 999px;
+  mix-blend-mode: normal;
+  isolation: isolate;
 }
 .burger span {
   position: absolute;
   left: 10px; right: 10px;
   height: 1.5px;
-  background: currentColor;
+  background: #F4EFE3;
+  border-radius: 2px;
   transition: transform 0.4s var(--ease), opacity 0.3s var(--ease), top 0.4s var(--ease);
 }
 .burger span:nth-child(1) { top: 15px; }
 .burger span:nth-child(2) { top: 22px; }
 .burger span:nth-child(3) { top: 29px; }
+body.menu-open .site-header { mix-blend-mode: normal; }
+body.menu-open .burger span { background: #F4EFE3; }
 body.menu-open .burger span:nth-child(1) { top: 22px; transform: rotate(45deg); }
 body.menu-open .burger span:nth-child(2) { opacity: 0; }
 body.menu-open .burger span:nth-child(3) { top: 22px; transform: rotate(-45deg); }

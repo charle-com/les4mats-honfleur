@@ -31,6 +31,13 @@
       overlay.scrollTop = 0;
     }
     window.scrollTo(0, savedScrollY);
+    // Force reflow pour eviter les artefacts de compositing (burger invisible sur Safari mobile)
+    if (burger) {
+      burger.style.display = 'none';
+      // eslint-disable-next-line no-unused-expressions
+      burger.offsetHeight;
+      burger.style.display = '';
+    }
   }
   function openMenu() {
     savedScrollY = window.scrollY || window.pageYOffset || 0;
