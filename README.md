@@ -39,7 +39,7 @@ Les anciens HTML `menu.html`, `equipe.html`, `contact.html` ont été retirés :
 - **Typographie** : [Fraunces](https://fonts.google.com/specimen/Fraunces) (display, variable, italique WONK) et [Satoshi](https://www.fontshare.com/fonts/satoshi) (body)
 - **Palette** : crème chaude, brume, terracotta (coques de bateau), nuit marine
 - **Détails** : grain papier en overlay, numérotation éditoriale (N° 01 à 06), waveform animée dans le marquee
-- **Photos** : bibliothèque propre au restaurant (façade, équipe, plats)
+- **Photos** : Charles Neveu (charlesneveu.fr)
 
 ## SEO
 
