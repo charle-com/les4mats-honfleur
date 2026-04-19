@@ -41,13 +41,58 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://charle-com.github.io/les4mats-honfleur/en/#organization",
+      "name": "Les 4 Mâts",
+      "alternateName": [
+        "4 Mâts",
+        "Les Quatre Mâts"
+      ],
+      "url": "https://charle-com.github.io/les4mats-honfleur/en/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://charle-com.github.io/les4mats-honfleur/#logo",
+        "url": "https://charle-com.github.io/les4mats-honfleur/assets/logo.webp",
+        "contentUrl": "https://charle-com.github.io/les4mats-honfleur/assets/logo.webp",
+        "caption": "Les 4 Mâts"
+      },
+      "image": {
+        "@id": "https://charle-com.github.io/les4mats-honfleur/#logo"
+      },
+      "foundingDate": "2024",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Honfleur, Normandie, France"
+      },
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Paul",
+          "jobTitle": "Co-founder"
+        },
+        {
+          "@type": "Person",
+          "name": "Jade",
+          "jobTitle": "Co-founder"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Honfleur"
+      },
+      "sameAs": [
+        "https://share.google/k8fCfIfjuv42vgwk3",
+        "https://instagram.com/les4mats"
+      ]
+    },
+    {
       "@type": "WebSite",
       "@id": "https://charle-com.github.io/les4mats-honfleur/en/#website",
       "url": "https://charle-com.github.io/les4mats-honfleur/en/",
       "name": "Les 4 Mâts",
       "inLanguage": "en-GB",
       "publisher": {
-        "@id": "https://charle-com.github.io/les4mats-honfleur/en/#restaurant"
+        "@id": "https://charle-com.github.io/les4mats-honfleur/en/#organization"
       }
     },
     {
@@ -230,6 +275,12 @@
           "@type": "FoodEstablishmentReservation",
           "name": "Reserve by phone"
         }
+      },
+      "parentOrganization": {
+        "@id": "https://charle-com.github.io/les4mats-honfleur/en/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://charle-com.github.io/les4mats-honfleur/en/#website"
       }
     }
   ]
