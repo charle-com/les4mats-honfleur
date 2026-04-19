@@ -111,6 +111,55 @@
   updateReservationCTA();
   setInterval(updateReservationCTA, 5 * 60 * 1000);
 
+  // --- Live open/closed status badge ---
+  // Mardi->dimanche, dejeuner 12-14:30, diner 19-23. Ferme lundi.
+  function getLiveStatus() {
+    const now = new Date();
+    const day = now.getDay();
+    const t = now.getHours() + now.getMinutes() / 60;
+    const STATES_FR = {
+      openLunch:   { state: 'is-open',   text: 'Ouvert · Service du midi' },
+      openDinner:  { state: 'is-open',   text: 'Ouvert · Service du soir' },
+      beforeLunch: { state: 'is-soon',   text: 'Ouvre à 12h' },
+      between:     { state: 'is-soon',   text: 'Entre services · 19h' },
+      afterLast:   { state: 'is-closed', text: 'Fermé · Demain 12h' },
+      sundayNight: { state: 'is-closed', text: 'Fermé · Mardi 12h' },
+      mondayAll:   { state: 'is-closed', text: 'Fermé · Mardi 12h' },
+    };
+    const STATES_EN = {
+      openLunch:   { state: 'is-open',   text: 'Open · Lunch service' },
+      openDinner:  { state: 'is-open',   text: 'Open · Dinner service' },
+      beforeLunch: { state: 'is-soon',   text: 'Opens at 12pm' },
+      between:     { state: 'is-soon',   text: 'Between services · 7pm' },
+      afterLast:   { state: 'is-closed', text: 'Closed · Tomorrow 12pm' },
+      sundayNight: { state: 'is-closed', text: 'Closed · Tuesday 12pm' },
+      mondayAll:   { state: 'is-closed', text: 'Closed · Tuesday 12pm' },
+    };
+    const S = LANG === 'en' ? STATES_EN : STATES_FR;
+
+    if (day === 1) return S.mondayAll;                     // Monday
+    if (day === 0 && t >= 23) return S.sundayNight;        // Sunday late
+    if (day === 2 && t < 12) {                             // Tuesday morning (after Monday closure)
+      return { state: 'is-soon', text: LANG === 'en' ? 'Opens at 12pm' : 'Ouvre à 12h' };
+    }
+    if (t < 12) return S.beforeLunch;
+    if (t < 14.5) return S.openLunch;
+    if (t < 19) return S.between;
+    if (t < 23) return S.openDinner;
+    return S.afterLast;                                     // late evening except sunday
+  }
+  function updateLiveStatus() {
+    const live = getLiveStatus();
+    document.querySelectorAll('[data-live-status]').forEach((el) => {
+      el.classList.remove('is-open', 'is-soon', 'is-closed');
+      el.classList.add(live.state);
+      const txt = el.querySelector('[data-live-status-text]');
+      if (txt) txt.textContent = live.text;
+    });
+  }
+  updateLiveStatus();
+  setInterval(updateLiveStatus, 60 * 1000);
+
   // --- Smooth scroll for in-page anchors with header offset compensation ---
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {

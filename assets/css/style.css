@@ -1133,6 +1133,58 @@ body.menu-open .nav-overlay {
 }
 .nav-overlay__lang a.is-active { color: var(--cream-hi); }
 
+/* ---------- Live status badge (ouvert / fermé / entre services) ---------- */
+.live-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.live-status--block {
+  display: inline-flex;
+  margin: 10px 0 6px;
+  padding: 6px 12px 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 26, 34, 0.04);
+  border: 1px solid rgba(15, 26, 34, 0.08);
+  font-size: 12px;
+}
+.live-status__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9aa1a6;
+  flex-shrink: 0;
+  position: relative;
+}
+.live-status.is-open .live-status__dot {
+  background: #1f8a4c;
+  box-shadow: 0 0 0 0 rgba(31, 138, 76, 0.55);
+  animation: live-pulse 2.2s ease-out infinite;
+}
+.live-status.is-soon .live-status__dot { background: #c9821a; }
+.live-status.is-closed .live-status__dot { background: #8a8f92; }
+.live-status__text { font-weight: 500; }
+.live-status.is-open .live-status__text { color: #1f8a4c; }
+.live-status.is-soon .live-status__text { color: #9a6a1a; }
+.live-status.is-closed .live-status__text { color: #6a7075; }
+@keyframes live-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(31, 138, 76, 0.55); }
+  70%  { box-shadow: 0 0 0 8px rgba(31, 138, 76, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(31, 138, 76, 0); }
+}
+/* In hero aside (fond sombre), force couleurs claires lisibles */
+.hero__meta .live-status.is-open .live-status__text { color: #7dd48f; }
+.hero__meta .live-status.is-soon .live-status__text { color: #f2c17a; }
+.hero__meta .live-status.is-closed .live-status__text { color: #c8ccd0; }
+@media (prefers-reduced-motion: reduce) {
+  .live-status.is-open .live-status__dot { animation: none; }
+}
+
 .nav-overlay__close {
   position: absolute;
   top: 18px;
