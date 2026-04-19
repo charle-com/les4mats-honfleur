@@ -3,8 +3,7 @@
    Design éditorial maritime. Fraunces + Satoshi. Crème + brume + terracotta.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap');
+/* Fonts preloaded via <link rel="preload"> in HTML head (non-blocking). */
 
 /* ---------- design tokens ---------- */
 :root {
@@ -996,8 +995,10 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.68);
 }
+.site-footer__bottom a { color: rgba(255,255,255,0.82); }
+.site-footer__bottom a:hover { color: #fff; }
 
 /* ---------- reveal animation ---------- */
 .reveal {
