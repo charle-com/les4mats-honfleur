@@ -66,7 +66,6 @@ Les anciens HTML `menu.html`, `equipe.html`, `contact.html` ont été retirés :
 
 - 4 rue de la Ville, 14600 Honfleur
 - 02 31 81 61 91
-- bonjour@les4mats.fr
 - Ouvert du mardi au dimanche, fermé le lundi
 - Déjeuner 12h à 14h30, dîner 19h à 23h
 
