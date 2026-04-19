@@ -1124,6 +1124,36 @@ body.menu-open .nav-overlay {
 }
 .nav-overlay__lang a.is-active { color: var(--cream-hi); }
 
+.nav-overlay__close {
+  position: absolute;
+  top: 22px;
+  right: var(--gutter);
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+  display: none;
+}
+body.menu-open .nav-overlay__close { display: block; }
+.nav-overlay__close span {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: var(--cream-hi);
+  border-radius: 2px;
+  transform-origin: center;
+  transition: background 0.25s var(--ease);
+}
+.nav-overlay__close span:nth-child(1) { transform: translateY(-50%) rotate(45deg); }
+.nav-overlay__close span:nth-child(2) { transform: translateY(-50%) rotate(-45deg); }
+.nav-overlay__close:hover span,
+.nav-overlay__close:focus-visible span { background: var(--accent-2); }
+
 /* ---------- responsive breakpoints ---------- */
 
 /* Large tablets / small laptops */

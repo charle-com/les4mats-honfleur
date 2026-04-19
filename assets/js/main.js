@@ -50,6 +50,8 @@
     overlay.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', closeMenu);
     });
+    const closeBtn = overlay.querySelector('.nav-overlay__close');
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
   }
   // close on Esc
   document.addEventListener('keydown', (e) => {
