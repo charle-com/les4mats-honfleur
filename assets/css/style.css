@@ -1,10 +1,10 @@
 :root {
-  --bg:       #F4EFE3;   --bg-mist:  #DCE8EA;   --bg-deep:  #12222B;   --ink:      #14181C;
+  --bg:       #F4EFE3;   --bg-mist:  #D4E4E7;   --bg-deep:  #12222B;   --ink:      #14181C;
   --ink-soft: #2A2F35;
   --muted:    #6B665C;
   --faint:    #9E988A;
   --line:     #D6CFBD;
-  --accent:   #8B2244;   --accent-2: #B85473;   --marine:   #A3C5CB;
+  --accent:   #A42847;   --accent-2: #C25876;   --marine:   #9DC4CA;
   --cream-hi: #FAF6EC;
 
   --ff-display: "Fraunces", "Times New Roman", serif;
