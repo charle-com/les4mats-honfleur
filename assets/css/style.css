@@ -1,10 +1,10 @@
 :root {
-  --bg:       #F4EFE3;   --bg-mist:  #E4EAE8;   --bg-deep:  #0F1A22;   --ink:      #14181C;
+  --bg:       #F4EFE3;   --bg-mist:  #DCE8EA;   --bg-deep:  #12222B;   --ink:      #14181C;
   --ink-soft: #2A2F35;
   --muted:    #6B665C;
   --faint:    #9E988A;
   --line:     #D6CFBD;
-  --accent:   #A64F1F;   --accent-2: #D2886A;   --marine:   #18384A;
+  --accent:   #8B2244;   --accent-2: #B85473;   --marine:   #A3C5CB;
   --cream-hi: #FAF6EC;
 
   --ff-display: "Fraunces", "Times New Roman", serif;
@@ -266,8 +266,10 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
 }
 .hero__title .and {
   font-style: italic;
+  font-weight: 500;
   font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
-  color: var(--accent-2);
+  color: var(--accent);
+  text-shadow: 0 2px 24px rgba(0,0,0,0.22);
 }
 .hero__sub {
   font-family: var(--ff-body);
@@ -340,7 +342,7 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
 
 .intro {
   background: var(--bg-mist);
-  padding: clamp(50px, 7vw, 90px) 0;
+  padding: clamp(28px, 4vw, 50px) 0;
   overflow: hidden;
 }
 .intro__track {
@@ -351,7 +353,7 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
   font-family: var(--ff-display);
   font-weight: 300;
   font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
-  font-size: clamp(48px, 10vw, 140px);
+  font-size: clamp(32px, 6vw, 78px);
   letter-spacing: -0.02em;
   color: var(--ink);
   line-height: 1;
@@ -1221,7 +1223,7 @@ body.menu-open .nav-overlay {
   }
   .hero__scroll { display: none; }
 
-  .intro__track { font-size: clamp(42px, 9vw, 88px); gap: 50px; }
+  .intro__track { font-size: clamp(28px, 5vw, 58px); gap: 40px; }
   .intro__track .dot { width: 6px; height: 6px; margin: 0 12px 12px; }
 
   .concept__grid { grid-template-columns: 1fr; gap: 32px; }
@@ -1296,7 +1298,7 @@ body.menu-open .nav-overlay {
   .hero__meta { font-size: 10px; line-height: 1.95; }
 
   .intro { padding: 46px 0; }
-  .intro__track { font-size: clamp(36px, 11vw, 56px); gap: 36px; }
+  .intro__track { font-size: clamp(24px, 7vw, 40px); gap: 28px; }
 
   .section-head {
     grid-template-columns: 1fr;
