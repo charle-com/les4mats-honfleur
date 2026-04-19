@@ -35,51 +35,201 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "@id": "https://charle-com.github.io/les4mats-honfleur/#restaurant",
-  "name": "Les 4 Mâts",
-  "url": "https://charle-com.github.io/les4mats-honfleur/",
-  "image": [
-    "https://charle-com.github.io/les4mats-honfleur/assets/facade.webp",
-    "https://charle-com.github.io/les4mats-honfleur/assets/plateau_de_fruit_de_mer.webp",
-    "https://charle-com.github.io/les4mats-honfleur/assets/terrasse_interieure.webp"
-  ],
-  "logo": "https://charle-com.github.io/les4mats-honfleur/assets/logo.webp",
-  "description": "Restaurant de poissons et fruits de mer à Honfleur. Table tenue par une jeune brigade, pêche du jour, cuisine de port.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "4 rue de la Ville",
-    "addressLocality": "Honfleur",
-    "postalCode": "14600",
-    "addressRegion": "Normandie",
-    "addressCountry": "FR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 49.4196451,
-    "longitude": 0.2346094
-  },
-  "telephone": "+33231816191",
-  "email": "bonjour@les4mats.fr",
-  "servesCuisine": ["Seafood", "French", "Normande"],
-  "priceRange": "€€",
-  "acceptsReservations": "True",
-  "openingHoursSpecification": [
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "14:30"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "19:00", "closes": "23:00"}
-  ],
-  "sameAs": [
-    "https://share.google/k8fCfIfjuv42vgwk3",
-    "https://instagram.com/les4mats"
-  ],
-  "hasMenu": "https://charle-com.github.io/les4mats-honfleur/assets/Menu_4_mats.pdf",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "reviewCount": "370",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://charle-com.github.io/les4mats-honfleur/#website",
+      "url": "https://charle-com.github.io/les4mats-honfleur/",
+      "name": "Les 4 Mâts",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://charle-com.github.io/les4mats-honfleur/#restaurant"
+      }
+    },
+    {
+      "@type": "Restaurant",
+      "@id": "https://charle-com.github.io/les4mats-honfleur/#restaurant",
+      "name": "Les 4 Mâts",
+      "url": "https://charle-com.github.io/les4mats-honfleur/",
+      "image": [
+        "https://charle-com.github.io/les4mats-honfleur/assets/facade.webp",
+        "https://charle-com.github.io/les4mats-honfleur/assets/plateau_de_fruit_de_mer.webp",
+        "https://charle-com.github.io/les4mats-honfleur/assets/terrasse_interieure.webp"
+      ],
+      "logo": "https://charle-com.github.io/les4mats-honfleur/assets/logo.webp",
+      "description": "Restaurant de poissons et fruits de mer à Honfleur. Table tenue par une jeune brigade, pêche du jour, cuisine de port.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4 rue de la Ville",
+        "addressLocality": "Honfleur",
+        "postalCode": "14600",
+        "addressRegion": "Normandie",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.4196451,
+        "longitude": 0.2346094
+      },
+      "telephone": "+33231816191",
+      "email": "bonjour@les4mats.fr",
+      "servesCuisine": [
+        "Seafood",
+        "French",
+        "Normande"
+      ],
+      "priceRange": "€€",
+      "acceptsReservations": true,
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "12:00",
+          "closes": "14:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "19:00",
+          "closes": "23:00"
+        }
+      ],
+      "sameAs": [
+        "https://share.google/k8fCfIfjuv42vgwk3",
+        "https://instagram.com/les4mats"
+      ],
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "Carte Les 4 Mâts",
+        "url": "https://charle-com.github.io/les4mats-honfleur/assets/Menu_4_mats.pdf",
+        "inLanguage": "fr",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Signatures",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Le Grand Plateau",
+                "description": "Huîtres de Normandie, tourteau, crevettes bouquet, bulots, langoustines. Pour deux.",
+                "suitableForDiet": "https://schema.org/PescatarianDiet"
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Poissons du jour",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Saumon rôti, beurre noisette",
+                "description": "Pavé épais cuit à la peau, beurre moussé, citron confit, légumes de la côte."
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Entrées",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Salade de la mer",
+                "description": "Crevettes, avocat, pamplemousse, jeunes pousses, vinaigrette aux agrumes."
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Desserts",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Tarte Tatin, crème fraîche d'Isigny",
+                "description": "Pommes du Pays d'Auge caramélisées, pâte feuilletée, crème fraîche épaisse."
+              }
+            ]
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "370",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Ken Sasaki"
+          },
+          "datePublished": "2026-04-18",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Cuisine très très bonne ! Personnel super sympathique. Aliments frais et les desserts maison étaient très bons."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Romain BA"
+          },
+          "datePublished": "2026-04-12",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Super expérience, l'équipe est au top, super accueillante. Un grand 10/10 comme pour la cuisine. Terrasse extérieure très agréable en été."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Steph Bozec"
+          },
+          "datePublished": "2026-04-14",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Un super moment passé pour mon anniversaire. Nous avons très bien mangé, le service était au top et sympathique."
+        }
+      ],
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "tel:+33231816191",
+          "inLanguage": "fr-FR"
+        },
+        "result": {
+          "@type": "FoodEstablishmentReservation",
+          "name": "Réservation par téléphone"
+        }
+      }
+    }
+  ]
 }
 </script>
 
