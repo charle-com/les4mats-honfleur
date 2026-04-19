@@ -641,6 +641,104 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
 .tile--6 { grid-column: 5 / span 4; grid-row: span 3; }
 .tile--7 { grid-column: 9 / span 4; grid-row: span 3; }
 
+/* ---------- avis (Google reviews) ---------- */
+.avis {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+.avis__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px 32px;
+  margin-top: 32px;
+}
+.review {
+  position: relative;
+  padding: 8px 0;
+}
+.review--a { grid-column: 1 / span 6; }
+.review--b { grid-column: 7 / span 6; margin-top: 60px; }
+.review--c { grid-column: 3 / span 7; margin-top: -20px; }
+.review__quote {
+  font-family: var(--ff-display);
+  font-weight: 300;
+  font-style: italic;
+  font-variation-settings: "opsz" 120, "SOFT" 100, "WONK" 1;
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 22px;
+  position: relative;
+  padding-left: 0;
+}
+.review__quote::before {
+  content: "“";
+  position: absolute;
+  top: -40px; left: -16px;
+  font-family: var(--ff-display);
+  font-size: 120px;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.25;
+  font-style: normal;
+  pointer-events: none;
+}
+.review__meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  font-weight: 500;
+}
+.review__meta .author {
+  color: var(--ink);
+  font-weight: 600;
+}
+.review__meta .dot {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: var(--muted); opacity: 0.6;
+  display: inline-block;
+}
+.review__stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-family: var(--ff-body);
+}
+
+.avis__footer {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 40px;
+}
+.avis__rating {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-variation-settings: "opsz" 60, "SOFT" 100, "WONK" 1;
+  font-size: clamp(22px, 2.4vw, 28px);
+  color: var(--ink);
+}
+.avis__rating strong {
+  color: var(--accent);
+  font-style: normal;
+  font-weight: 600;
+  font-variation-settings: "opsz" 60, "SOFT" 40;
+}
+
 /* ---------- réserver ---------- */
 .reserver {
   background: var(--accent);
@@ -1067,6 +1165,14 @@ body.menu-open .nav-overlay {
     margin-top: 0 !important;
   }
   .plat__media { aspect-ratio: 4/5; }
+
+  .avis__grid { gap: 40px 24px; }
+  .review--a, .review--b, .review--c {
+    grid-column: 1 / -1 !important;
+    margin-top: 0 !important;
+  }
+  .review__quote { font-size: clamp(22px, 3.2vw, 28px); }
+  .review__quote::before { font-size: 90px; top: -30px; left: -8px; }
 
   .equipage__grid {
     grid-template-columns: 1fr;
