@@ -1,68 +1,96 @@
-# Les 4 Mats - Site Vitrine
+# Les 4 Mâts
 
-Site vitrine statique pour le restaurant **Les 4 Mats** à Honfleur.
+Site one-page bilingue (FR / EN) du restaurant **Les 4 Mâts**, table marine à Honfleur. HTML / CSS / JS statique, design éditorial, SEO local optimisé.
 
-## 🚀 Déploiement sur GitHub Pages
+**En ligne :** https://charle-com.github.io/les4mats-honfleur/
 
-Pour activer GitHub Pages et rendre le site accessible en ligne :
+## Pages
 
-1. Allez sur https://github.com/charlesneveu/les4mats-honfleur
-2. Cliquez sur **Settings** (Paramètres)
-3. Dans le menu de gauche, cliquez sur **Pages**
-4. Sous **Source**, sélectionnez :
-   - Branch: `main`
-   - Folder: `/ (root)`
-5. Cliquez sur **Save**
+- `/` (FR) : one-page complète · hero, le lieu, la carte, l'équipage, le carnet, réserver, contact
+- `/en/` : version anglaise de la one-page
+- `/mentions-legales.html` · `/en/legal.html`
+- `/confidentialite.html` · `/en/privacy.html`
 
-Le site sera accessible à l'adresse : **https://charlesneveu.github.io/les4mats-honfleur/**
+Les anciens HTML `menu.html`, `equipe.html`, `contact.html` ont été retirés : leur contenu vit désormais en sections ancrées de l'index pour concentrer le link juice et éviter le duplicate content.
 
-⚠️ **Note** : Le déploiement peut prendre quelques minutes.
-
-## 📁 Structure du projet
+## Structure
 
 ```
-4MATS/
-├── index.html              # Page d'accueil
-├── menu.html               # Menu du restaurant
-├── contact.html            # Page de contact
-├── equipe.html             # Page équipe
-├── mentions-legales.html   # Mentions légales
-├── confidentialite.html     # Politique de confidentialité
-├── sitemap.xml             # Sitemap pour le SEO
-├── robots.txt              # Fichier robots.txt
+.
+├── index.html                  FR · one-page
+├── mentions-legales.html       FR
+├── confidentialite.html        FR
+├── en/
+│   ├── index.html              EN · one-page
+│   ├── legal.html              EN
+│   └── privacy.html            EN
 ├── assets/
-│   ├── css/
-│   │   ├── custom.css      # Styles premium minimalistes
-│   │   └── styles.css      # Styles de base
-│   ├── img/                # Images du site
-│   └── svg/                # Logos SVG
-└── README.md               # Ce fichier
+│   ├── css/style.css           Design system + responsive
+│   ├── js/main.js              Burger menu, reveal scroll, CTA dynamique bilingue
+│   ├── *.jpeg / *.webp         Photos du restaurant (façade, équipe, plats, salle)
+│   ├── logo.webp · logo.jpg    Favicon
+│   └── Menu_4_mats.pdf         Carte complète (téléchargeable)
+├── sitemap.xml                 Bilingue avec xhtml:link alternate
+└── robots.txt
 ```
 
-## 🎨 Caractéristiques
+## Design
 
-- **Design** : Premium minimaliste, inspiré de bonaloi.com
-- **Responsive** : Mobile-first avec Bootstrap 5
-- **SEO** : Meta tags complets, Schema.org JSON-LD, sitemap
-- **Accessibilité** : Skip-link, focus visible, contrastes corrects
-- **Performance** : Statique, rapide, sans dépendances lourdes
+- **Typographie** : [Fraunces](https://fonts.google.com/specimen/Fraunces) (display, variable, italique WONK) et [Satoshi](https://www.fontshare.com/fonts/satoshi) (body)
+- **Palette** : crème chaude, brume, terracotta (coques de bateau), nuit marine
+- **Détails** : grain papier en overlay, numérotation éditoriale (N° 01 à 06), waveform animée dans le marquee
+- **Photos** : bibliothèque propre au restaurant (façade, équipe, plats)
 
-## 🛠️ Technologies
+## SEO
 
-- HTML5
-- CSS3 (Variables CSS, Flexbox, Grid)
-- Bootstrap 5.3.2
-- Google Fonts (Pacifico, Montserrat)
-- Schema.org JSON-LD
+- **Schema.org Restaurant** JSON-LD complet (adresse, géo, horaires, cuisine, menu PDF)
+- **Hreflang** bidirectionnel FR/EN + x-default sur toutes les pages
+- **Sitemap** enrichi avec `xhtml:link rel="alternate"` par URL
+- **Canonical** par langue
+- **Twitter Card** + Open Graph
+- **h1 unique** par page
+- **Preload** image hero, preconnect Google Fonts / Fontshare
+- **noscript fallback** pour que le contenu reste visible sans JavaScript
+- **Cible FR** : `restaurant honfleur` (14 800 recherches/mois, KD 0.1) + longue traîne
+- **Cible EN** : `restaurant honfleur`, `honfleur restaurants` (840+ recherches/mois UK + US)
 
-## 📝 Notes
+## Fonctionnalités
 
-- Tous les placeholders `[BASE_URL]` ont été remplacés par l'URL GitHub Pages
-- Les valeurs `[SERVES_CUISINE]` et `[PRICE_RANGE]` ont été définies dans le Schema.org
-- Le site est prêt pour la mise en ligne
+- **One-page scroll** avec smooth-scroll et offset de header
+- **Burger menu** overlay plein écran en mobile avec liens + contact + language switcher
+- **CTA « Réserver » dynamique** : affiche `ce midi`, `ce soir`, `pour demain`, `pour mardi` (si dimanche tard), `cette semaine` (si lundi fermé) selon l'heure, en français et en anglais
+- **Responsive** breakpoints 1200 / 960 / 640 / 380px
+- **`prefers-reduced-motion`** respecté
 
-## 🔗 Liens utiles
+## Contact restaurant
 
-- **Repository** : https://github.com/charlesneveu/les4mats-honfleur
-- **Site en ligne** : https://charlesneveu.github.io/les4mats-honfleur/ (après activation de GitHub Pages)
+- 4 rue de la Ville, 14600 Honfleur
+- 02 31 81 61 91
+- bonjour@les4mats.fr
+- Ouvert du mardi au dimanche, fermé le lundi
+- Déjeuner 12h à 14h30, dîner 19h à 23h
 
+## Développement
+
+Le site est statique, aucune dépendance à installer. Pour prévisualiser :
+
+```bash
+# Prévisualisation rapide
+open index.html
+
+# Ou avec un serveur local (recommandé pour tester le JS bilingue)
+python3 -m http.server 8000
+# puis http://localhost:8000/
+```
+
+## Déploiement
+
+Hébergé sur **GitHub Pages**. Chaque push sur `main` déploie automatiquement. Pour activer Pages à la main :
+
+1. Settings · Pages
+2. Source : `main` / `/ (root)`
+3. URL : `https://charle-com.github.io/les4mats-honfleur/`
+
+## Licence
+
+Site et contenu © Les 4 Mâts · Design et développement [charle-com](https://github.com/charle-com).
