@@ -92,4 +92,4 @@ Hébergé sur **GitHub Pages**. Chaque push sur `main` déploie automatiquement.
 
 ## Licence
 
-Site et contenu © Les 4 Mâts · Design et développement [charle-com](https://github.com/charle-com).
+Site et contenu © Les 4 Mâts · Design et développement [Charles Neveu](https://charlesneveu.fr).
