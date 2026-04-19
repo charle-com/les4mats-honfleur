@@ -20,13 +20,21 @@
     }, { passive: true });
   }
 
-  // --- Burger menu toggle ---
+  // --- Burger menu toggle (with scroll lock iOS/Android safe) ---
+  let savedScrollY = 0;
   function closeMenu() {
     body.classList.remove('menu-open');
+    body.style.removeProperty('--scroll-top');
     if (burger) burger.setAttribute('aria-expanded', 'false');
-    if (overlay) overlay.setAttribute('aria-hidden', 'true');
+    if (overlay) {
+      overlay.setAttribute('aria-hidden', 'true');
+      overlay.scrollTop = 0;
+    }
+    window.scrollTo(0, savedScrollY);
   }
   function openMenu() {
+    savedScrollY = window.scrollY || window.pageYOffset || 0;
+    body.style.setProperty('--scroll-top', `-${savedScrollY}px`);
     body.classList.add('menu-open');
     if (burger) burger.setAttribute('aria-expanded', 'true');
     if (overlay) overlay.setAttribute('aria-hidden', 'false');

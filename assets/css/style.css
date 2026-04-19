@@ -1042,11 +1042,22 @@ body.menu-open .burger span:nth-child(3) { top: 22px; transform: rotate(-45deg);
   z-index: 105;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 80px var(--gutter) 40px;
+  justify-content: flex-start;
+  padding: 100px var(--gutter) 40px;
   transform: translateX(100%);
   transition: transform 0.5s var(--ease);
   visibility: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+body.menu-open {
+  position: fixed;
+  top: var(--scroll-top, 0);
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
 }
 body.menu-open .nav-overlay {
   transform: translateX(0);
