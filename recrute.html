@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les 4 Mâts · Rejoindre l'équipage | Honfleur</title>
+<meta name="description" content="On recrute ! Rejoins une brigade jeune au bord du Vieux Bassin d'Honfleur. Cuisine, salle, polyvalent.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Les 4 Mâts · Rejoindre l'équipage | Honfleur">
+<meta property="og:description" content="On recrute ! Rejoins une brigade jeune au bord du Vieux Bassin d'Honfleur. Cuisine, salle, polyvalent.">
+<meta property="og:image" content="assets/facade.webp">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://charle-com.github.io/les4mats-honfleur/recrute.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.fontshare.com">
+
+<link rel="preload" as="image" href="assets/facade.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/l_equipe.webp" type="image/webp">
+
+<link rel="icon" type="image/webp" href="assets/logo.webp">
+<link rel="apple-touch-icon" href="assets/logo.jpg">
+
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1&display=swap"><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/style.css">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+
+<link rel="canonical" href="https://charle-com.github.io/les4mats-honfleur/recrute.html">
+<link rel="alternate" hreflang="fr" href="https://charle-com.github.io/les4mats-honfleur/recrute.html">
+<link rel="alternate" hreflang="en" href="https://charle-com.github.io/les4mats-honfleur/en/jobs.html">
+<meta name="theme-color" content="#F4EFE3">
+
+<style>
+.recrute-hero {
+  min-height: 100vh;
+  background: var(--bg-deep);
+  color: var(--cream-hi);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+}
+.recrute-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(78,0,0,0.35), transparent 50%),
+    radial-gradient(ellipse at 85% 70%, rgba(26,50,80,0.4), transparent 55%);
+  pointer-events: none;
+}
+.recrute-hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+.recrute-hero__wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.recrute-hero__eyebrow {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--marine);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.recrute-hero__titre {
+  font-family: var(--ff-script);
+  font-size: clamp(64px, 12vw, 160px);
+  font-weight: 700;
+  line-height: 0.95;
+  color: var(--sun);
+  margin: 0 0 28px;
+  letter-spacing: -0.02em;
+}
+.recrute-hero__tagline {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: clamp(18px, 2.2vw, 26px);
+  color: rgba(250,246,236,0.75);
+  line-height: 1.45;
+  margin: 0;
+  font-variation-settings: "opsz" 30, "SOFT" 100;
+  max-width: 36ch;
+}
+.recrute-hero__aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 28px;
+}
+.recrute-hero__sticker {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px dashed rgba(240,222,138,0.5);
+  background: var(--accent);
+  color: var(--sun);
+  font-family: var(--ff-script);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: spin-slow 20s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.recrute-hero__stat {
+  text-align: right;
+}
+.recrute-hero__stat-num {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 400;
+  font-variation-settings: "opsz" 60, "SOFT" 50, "WONK" 1;
+  color: var(--cream-hi);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.recrute-hero__stat-label {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(250,246,236,0.45);
+  margin-top: 4px;
+}
+
+.recrute-avantages {
+  background: var(--bg);
+  padding: clamp(80px, 10vw, 140px) 0;
+}
+.recrute-avantages__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: clamp(40px, 6vw, 80px);
+  background: var(--line);
+}
+.avantage-card {
+  background: var(--bg);
+  padding: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 44px);
+  transition: background 0.35s var(--ease);
+}
+.avantage-card:hover { background: var(--cream-hi); }
+.avantage-card__emoji {
+  font-size: 36px;
+  line-height: 1;
+  display: block;
+  margin-bottom: 20px;
+}
+.avantage-card__titre {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0 0 12px;
+  font-variation-settings: "opsz" 60, "SOFT" 40, "WONK" 1;
+}
+.avantage-card__titre em {
+  font-style: italic;
+  color: var(--accent);
+  font-variation-settings: "opsz" 60, "SOFT" 100, "WONK" 1;
+}
+.avantage-card__desc {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 28ch;
+}
+
+.recrute-equipe {
+  background: var(--bg-mist);
+  overflow: hidden;
+}
+.recrute-equipe__grid {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: 0;
+  align-items: stretch;
+}
+.recrute-equipe__image {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+.recrute-equipe__image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.2s var(--ease);
+}
+.recrute-equipe:hover .recrute-equipe__image img { transform: scale(1.03); }
+.recrute-equipe__text {
+  padding: clamp(60px, 8vw, 120px) clamp(40px, 5vw, 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.recrute-equipe__num {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 24px;
+  font-variation-settings: "opsz" 14, "SOFT" 100;
+}
+.recrute-equipe__quote {
+  font-family: var(--ff-display);
+  font-weight: 300;
+  font-style: italic;
+  font-variation-settings: "opsz" 120, "SOFT" 100, "WONK" 1;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 28px;
+  letter-spacing: -0.01em;
+}
+.recrute-equipe__sig {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+
+.recrute-profils {
+  background: var(--bg);
+  padding: clamp(80px, 10vw, 140px) 0;
+}
+.recrute-profils__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: clamp(40px, 6vw, 70px);
+}
+.profil-card {
+  border: 1px solid var(--line);
+  padding: clamp(28px, 3vw, 44px);
+  position: relative;
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.profil-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+.profil-card__num {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 16px;
+  font-variation-settings: "opsz" 14, "SOFT" 100;
+}
+.profil-card__titre {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.05;
+  color: var(--ink);
+  margin: 0 0 16px;
+  letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 60, "SOFT" 40, "WONK" 1;
+}
+.profil-card__titre em {
+  font-style: italic;
+  color: var(--accent);
+  font-variation-settings: "opsz" 60, "SOFT" 100, "WONK" 1;
+}
+.profil-card__desc {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.recrute-cta-final {
+  background: var(--sun);
+  color: var(--bg-deep);
+  text-align: center;
+  padding: clamp(100px, 14vw, 180px) 0;
+  position: relative;
+  overflow: hidden;
+}
+.recrute-cta-final::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.recrute-cta-final__eyebrow {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+.recrute-cta-final__titre {
+  font-family: var(--ff-script);
+  font-size: clamp(54px, 10vw, 130px);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 0.92;
+  margin: 0 0 44px;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 1;
+}
+.recrute-cta-final__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.btn-recrute-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 40px;
+  background: var(--accent);
+  color: var(--sun);
+  font-family: var(--ff-body);
+  font-size: 13px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+}
+.btn-recrute-primary:hover { background: var(--bg-deep); transform: translateY(-2px); }
+.btn-recrute-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 40px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  font-family: var(--ff-body);
+  font-size: 13px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease), color 0.3s var(--ease);
+}
+.btn-recrute-ghost:hover { background: var(--accent); color: var(--sun); transform: translateY(-2px); }
+
+@media (max-width: 960px) {
+  .recrute-hero__wrap { grid-template-columns: 1fr; gap: 40px; }
+  .recrute-hero__aside { align-items: flex-start; flex-direction: row; flex-wrap: wrap; gap: 20px; }
+  .recrute-avantages__grid { grid-template-columns: 1fr 1fr; }
+  .recrute-equipe__grid { grid-template-columns: 1fr; }
+  .recrute-equipe__image { min-height: 340px; }
+  .recrute-profils__grid { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 640px) {
+  .recrute-hero { padding: 100px 0 60px; }
+  .recrute-hero__titre { font-size: clamp(52px, 16vw, 96px); }
+  .recrute-avantages__grid { grid-template-columns: 1fr; }
+  .recrute-hero__sticker { width: 100px; height: 100px; font-size: 17px; }
+  .recrute-cta-final__titre { font-size: clamp(48px, 14vw, 80px); }
+  .recrute-cta-final__actions { flex-direction: column; padding: 0 20px; }
+  .btn-recrute-primary, .btn-recrute-ghost { width: 100%; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <a href="index.html" class="brand"><em>Les</em> 4 Mâts</a>
+  <nav class="nav">
+    <a href="index.html#lieu">Le lieu</a>
+    <a href="index.html#carte">La carte</a>
+    <a href="index.html#equipage">L'équipage</a>
+    <a href="index.html#carnet">Le carnet</a>
+    <a href="index.html#avis">Avis</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <a href="index.html#reserver" class="cta">Réserver</a>
+  <div class="lang-switch"><a href="recrute.html" class="is-active" aria-current="page">FR</a><a href="en/jobs.html">EN</a></div>
+  <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <button class="nav-overlay__close" type="button" aria-label="Fermer le menu"><span></span><span></span></button>
+  <div class="nav-overlay__links">
+    <a href="index.html#lieu">Le <em>lieu</em></a>
+    <a href="index.html#carte">La <em>carte</em></a>
+    <a href="index.html#equipage">L'<em>équipage</em></a>
+    <a href="index.html#carnet">Le <em>carnet</em></a>
+    <a href="index.html#avis">Les <em>avis</em></a>
+    <a href="index.html#contact"><em>Contact</em></a>
+    <a href="index.html#reserver"><em>Réserver</em></a>
+  </div>
+  <div class="nav-overlay__foot">
+    <span>4 rue de la Ville · 14600 Honfleur</span>
+    <a href="tel:+33231816191">02 31 81 61 91</a>
+    <div class="nav-overlay__lang">
+      <a href="recrute.html" class="is-active" aria-current="page">Français</a>
+      <a href="en/jobs.html">English</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<section class="recrute-hero">
+  <div class="recrute-hero__bg" aria-hidden="true"></div>
+  <div class="recrute-hero__wrap wrap">
+    <div class="recrute-hero__content">
+      <span class="recrute-hero__eyebrow">On recrute · 2026</span>
+      <h1 class="recrute-hero__titre">Rejoindre<br>l'équipage.</h1>
+      <p class="recrute-hero__tagline">Une brigade jeune au bord du Vieux Bassin.<br>Cuisine, salle, polyvalent.</p>
+      <a href="tel:+33231816191" class="btn-primary recrute-hero__cta" style="margin-top: 40px;">Appeler Paul ou Jade</a>
+    </div>
+    <div class="recrute-hero__aside">
+      <div class="recrute-hero__sticker" aria-hidden="true">On<br>recrute !</div>
+      <div class="recrute-hero__stat">
+        <span class="recrute-hero__stat-num">2024</span>
+        <span class="recrute-hero__stat-label">Ouvert depuis</span>
+      </div>
+      <div class="recrute-hero__stat">
+        <span class="recrute-hero__stat-num">Honfleur</span>
+        <span class="recrute-hero__stat-label">Normandie, France</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recrute-avantages">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="num">N° 01</span>
+      <div class="titles">
+        <h2>Ce qu'on <em>offre.</em></h2>
+        <p>Pas de discours corporate. Juste ce qu'on pense être vrai, au quotidien.</p>
+      </div>
+    </div>
+    <div class="recrute-avantages__grid">
+      <div class="avantage-card reveal">
+        <span class="avantage-card__emoji">🐟</span>
+        <h3 class="avantage-card__titre">La pêche du <em>matin</em></h3>
+        <p class="avantage-card__desc">Des produits frais chaque jour, directement du port de Honfleur. On sait d'où ça vient.</p>
+      </div>
+      <div class="avantage-card reveal" style="--delay:.08s;">
+        <span class="avantage-card__emoji">🌊</span>
+        <h3 class="avantage-card__titre">Le Vieux <em>Bassin</em></h3>
+        <p class="avantage-card__desc">Le cadre, c'est pas rien. Travailler face à l'eau, ça change le rapport au boulot.</p>
+      </div>
+      <div class="avantage-card reveal" style="--delay:.16s;">
+        <span class="avantage-card__emoji">👨‍🍳</span>
+        <h3 class="avantage-card__titre">Une brigade <em>jeune</em></h3>
+        <p class="avantage-card__desc">Pas de hiérarchie inutile. Chacun a sa place, son mot à dire, son rôle qui compte.</p>
+      </div>
+      <div class="avantage-card reveal" style="--delay:.24s;">
+        <span class="avantage-card__emoji">📅</span>
+        <h3 class="avantage-card__titre">Des horaires <em>respectés</em></h3>
+        <p class="avantage-card__desc">On pense à l'organisation de l'équipe autant qu'au service. Le mot d'ordre : cohérence.</p>
+      </div>
+      <div class="avantage-card reveal" style="--delay:.32s;">
+        <span class="avantage-card__emoji">🤝</span>
+        <h3 class="avantage-card__titre">Pas de <em>gastronomique</em></h3>
+        <p class="avantage-card__desc">On vient pas du sérail. Bienveillance, franchise, et une exigence tranquille sur l'assiette.</p>
+      </div>
+      <div class="avantage-card reveal" style="--delay:.40s;">
+        <span class="avantage-card__emoji">✨</span>
+        <h3 class="avantage-card__titre">Une fierté <em>normande</em></h3>
+        <p class="avantage-card__desc">Servir une cuisine qui ressemble à nos étés. Simple à dire, pas si courant à trouver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recrute-equipe">
+  <div class="recrute-equipe__grid">
+    <div class="recrute-equipe__image reveal">
+      <picture>
+        <source srcset="assets/l_equipe.webp" type="image/webp">
+        <img src="assets/l_equipe.jpeg" alt="La brigade des 4 Mâts" loading="lazy">
+      </picture>
+    </div>
+    <div class="recrute-equipe__text reveal" style="--delay:.15s;">
+      <p class="recrute-equipe__num">N° 02 · L'équipage</p>
+      <blockquote class="recrute-equipe__quote">«&nbsp;On voulait une cuisine qui ressemble à nos étés normands. Des gens autour qui ont envie d'y croire autant que nous.&nbsp;»</blockquote>
+      <p class="recrute-equipe__sig">Jade &amp; Paul · Cofondateurs · Les 4 Mâts</p>
+    </div>
+  </div>
+</section>
+
+<section class="recrute-profils">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="num">N° 03</span>
+      <div class="titles">
+        <h2>On cherche <em>qui&nbsp;?</em></h2>
+        <p>Trois profils en priorité. Si t'en fais pas partie mais t'as envie, appelle quand même.</p>
+      </div>
+    </div>
+    <div class="recrute-profils__grid">
+      <div class="profil-card reveal">
+        <span class="profil-card__num">Profil 01</span>
+        <h3 class="profil-card__titre">Cuisinier<em>·e</em></h3>
+        <p class="profil-card__desc">Tu maîtrises les bases, tu aimes le poisson frais et tu t'adaptes à une carte courte qui change. L'expérience gastronomique n'est pas obligatoire, l'envie d'apprendre, si.</p>
+      </div>
+      <div class="profil-card reveal" style="--delay:.1s;">
+        <span class="profil-card__num">Profil 02</span>
+        <h3 class="profil-card__titre">Serveur·<em>euse</em></h3>
+        <p class="profil-card__desc">Tu sais accueillir, tu connais la carte par cœur en moins d'une semaine et tu aimes que les gens repartent avec un grand sourire. Le service, c'est ton truc.</p>
+      </div>
+      <div class="profil-card reveal" style="--delay:.2s;">
+        <span class="profil-card__num">Profil 03</span>
+        <h3 class="profil-card__titre">Profil <em>polyvalent</em></h3>
+        <p class="profil-card__desc">T'aimes mettre la main à la pâte partout ? Cuisine, salle, plonge, appros. Si t'es motivé·e et fiable, on a une place pour toi dans l'équipage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recrute-cta-final">
+  <div class="wrap">
+    <span class="recrute-cta-final__eyebrow">On recrute · Honfleur · 2026</span>
+    <h2 class="recrute-cta-final__titre">On se<br>rencontre ?</h2>
+    <div class="recrute-cta-final__actions reveal">
+      <a href="tel:+33231816191" class="btn-recrute-primary">Appeler le restaurant</a>
+      <a href="index.html" class="btn-recrute-ghost">Retour au site</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p class="site-footer__brand"><em>Les</em><br>4 Mâts</p>
+      <p class="site-footer__tag">Table marine à Honfleur.<br>Pêche du matin, service du soir.</p>
+    </div>
+    <div>
+      <h4>Visiter</h4>
+      <ul>
+        <li><a href="index.html#lieu">Le lieu</a></li>
+        <li><a href="index.html#carte">La carte</a></li>
+        <li><a href="index.html#equipage">L'équipage</a></li>
+        <li><a href="index.html#carnet">Le carnet</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Réserver</h4>
+      <ul><li><a href="tel:+33231816191">02 31 81 61 91</a></li></ul>
+      <h4 style="margin-top: 28px;">Suivre</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/restaurant_4mats/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tripadvisor.fr/Restaurant_Review-g187189-d27737789-Reviews-4_Mats-Honfleur_Calvados_Basse_Normandie_Normandy.html" target="_blank" rel="noopener">Tripadvisor</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Adresse</h4>
+      <ul>
+        <li>4 rue de la Ville</li>
+        <li>14600 Honfleur</li>
+        <li>Normandie · France</li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© 2026 Les 4 Mâts</span>
+    <span>
+      <a href="mentions-legales.html">Mentions légales</a>
+      &nbsp;·&nbsp;
+      <a href="confidentialite.html">Confidentialité</a>
+      &nbsp;·&nbsp;
+      <a href="recrute.html">Rejoindre l'équipe</a>
+    </span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

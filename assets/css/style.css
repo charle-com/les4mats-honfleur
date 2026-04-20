@@ -375,11 +375,12 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
 .intro__track .wave {
   font-style: normal;
   font-family: var(--ff-display);
-  font-size: 0.7em;
+  font-size: 1.1em;
   color: var(--accent);
-  opacity: 0.55;
+  opacity: 0.6;
   flex-shrink: 0;
   align-self: center;
+  line-height: 1;
 }
 @keyframes marquee {
   from { transform: translateX(0); }
@@ -524,9 +525,9 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
   overflow: hidden;
 }
 .equipage .section-head .titles h2 { color: var(--cream-hi); }
-.equipage .section-head .titles h2 em { color: var(--accent-2); }
+.equipage .section-head .titles h2 em { color: var(--marine); }
 .equipage .section-head .titles p { color: rgba(255,255,255,0.65); }
-.equipage .section-head .num { color: var(--accent-2); }
+.equipage .section-head .num { color: var(--marine); }
 
 .equipage__glow {
   position: absolute;
@@ -580,7 +581,7 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
   font-family: var(--ff-display);
   font-style: italic;
   font-size: 22px;
-  color: var(--accent-2);
+  color: var(--marine);
   font-variation-settings: "opsz" 60, "SOFT" 100, "WONK" 1;
 }
 .equipage__sig span { position: relative; padding-top: 6px; }
@@ -944,7 +945,7 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
 }
 .site-footer__brand em {
   font-style: italic;
-  color: var(--accent-2);
+  color: var(--sun);
   font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
 }
 .site-footer__tag {
@@ -960,7 +961,7 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
   font-weight: 500;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--accent-2);
+  color: var(--marine);
   margin: 0 0 16px;
 }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
@@ -1071,12 +1072,12 @@ body.menu-open .nav-overlay {
 }
 .nav-overlay__links a:active,
 .nav-overlay__links a:hover {
-  color: var(--accent-2);
+  color: var(--marine);
   transform: translateX(8px);
 }
 .nav-overlay__links em {
   font-style: italic;
-  color: var(--accent-2);
+  color: var(--marine);
   font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
 }
 .nav-overlay__foot {
@@ -1092,7 +1093,7 @@ body.menu-open .nav-overlay {
   flex-shrink: 0;
 }
 .nav-overlay__foot a {
-  color: var(--accent-2);
+  color: var(--marine);
   font-weight: 500;
 }
 .nav-overlay__lang {
@@ -1196,49 +1197,7 @@ body.menu-open .nav-overlay {
   border-color: rgba(244, 239, 227, 0.5);
 }
 .nav-overlay__close:hover span,
-.nav-overlay__close:focus-visible span { background: var(--accent-2); }
-
-.sticker {
-  position: absolute;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  border: 2px dashed rgba(240,222,138,0.7);
-  background: rgba(78,0,0,0.88);
-  color: var(--sun);
-  font-family: var(--ff-script);
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.25;
-  padding: 10px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  pointer-events: none;
-  user-select: none;
-  transition: transform 0.4s var(--ease);
-}
-.sticker--peche {
-  bottom: -22px;
-  right: -22px;
-  transform: rotate(8deg);
-}
-.sticker--bassin {
-  top: 16px;
-  right: -16px;
-  transform: rotate(-5deg);
-  width: 82px;
-  height: 82px;
-  font-size: 12px;
-}
-.concept__image:hover .sticker,
-.tile:hover .sticker { transform: rotate(0deg) scale(1.06); }
-.sticker--peche { transform: rotate(8deg); }
-.concept__image:hover .sticker--peche { transform: rotate(2deg) scale(1.06); }
+.nav-overlay__close:focus-visible span { background: var(--marine); }
 
 .chiffres {
   background: var(--bg-deep);
@@ -1424,7 +1383,7 @@ body.menu-open .nav-overlay {
   }
   .hero__scroll { display: none; }
 
-  .intro__track { font-size: clamp(28px, 5vw, 58px); gap: 24px; }
+  .intro__track { font-size: clamp(28px, 5vw, 58px); gap: 24px; animation-duration: 24s; }
 
   .concept__grid { grid-template-columns: 1fr; gap: 32px; }
   .concept__text p { max-width: 100%; font-size: clamp(18px, 2.4vw, 22px); }
@@ -1504,7 +1463,7 @@ body.menu-open .nav-overlay {
   .hero__meta { font-size: 10px; line-height: 1.95; }
 
   .intro { padding: 24px 0; }
-  .intro__track { font-size: clamp(18px, 5vw, 28px); gap: 16px; font-weight: 400; }
+  .intro__track { font-size: clamp(18px, 5vw, 28px); gap: 16px; font-weight: 400; animation-duration: 32s; }
 
   .section-head {
     grid-template-columns: 1fr;
