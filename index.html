@@ -302,11 +302,10 @@
 <header class="site-header" id="siteHeader">
   <a href="#" class="brand"><em>Les</em> 4 Mâts</a>
   <nav class="nav">
-    <a href="#lieu">Le lieu</a>
+    <a href="#avis">Avis</a>
+    <a href="#carnet">Le carnet</a>
     <a href="#carte">La carte</a>
     <a href="#equipage">L'équipage</a>
-    <a href="#carnet">Le carnet</a>
-    <a href="#avis">Avis</a>
     <a href="#contact">Contact</a>
   </nav>
   <a href="#reserver" class="cta">Réserver</a>
@@ -317,11 +316,10 @@
 <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
   <button class="nav-overlay__close" type="button" aria-label="Fermer le menu"><span></span><span></span></button>
   <div class="nav-overlay__links">
-    <a href="index.html#lieu">Le <em>lieu</em></a>
+    <a href="index.html#avis">Les <em>avis</em></a>
+    <a href="index.html#carnet">Le <em>carnet</em></a>
     <a href="index.html#carte">La <em>carte</em></a>
     <a href="index.html#equipage">L'<em>équipage</em></a>
-    <a href="index.html#carnet">Le <em>carnet</em></a>
-    <a href="index.html#avis">Les <em>avis</em></a>
     <a href="index.html#contact"><em>Contact</em></a>
     <a href="index.html#reserver"><em>Réserver</em></a>
   </div>
@@ -387,44 +385,115 @@
   </div>
 </div>
 
-<section class="concept" id="lieu">
+<section class="avis" id="avis">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="num">N° 01</span>
       <div class="titles">
-        <h2>Une table <em>à quai.</em></h2>
-        <p>À deux pas du Vieux Bassin, Les 4 Mâts pose son ancre entre les maisons à colombages et les mâts des chalutiers. La porte reste ouverte, les tables se rallongent, et la soirée s'étire un peu plus qu'on ne l'avait prévu.</p>
+        <h2>Ce qu'on en <em>dit.</em></h2>
+        <p>Quelques mots laissés par nos clients sur Google. La maison vit aussi grâce à eux.</p>
       </div>
     </div>
 
-    <div class="concept__grid">
-      <div class="concept__text reveal">
-        <p>Un plateau qui déborde, une bouteille qu'on rallonge, la pêche du matin servie le soir. <em>Les rires éclatent mieux bien accompagnés.</em></p>
-        <p>Pas de carte figée. Pas de sauce qui cache. Juste le produit, le feu, ce qu'on a envie de partager.</p>
-        <p><em>Un bon repas, ça commence en cuisine. Une belle soirée, ça finit toujours en salle.</em></p>
-      </div>
+    <div class="avis__grid">
+      <article class="review review--a reveal">
+        <p class="review__quote">Cuisine très très bonne ! Personnel super sympathique. Aliments frais et les desserts maison étaient très bons. Je recommande !</p>
+        <div class="review__meta">
+          <span class="review__stars" aria-label="Note 5 sur 5">★★★★★</span>
+          <span class="dot"></span>
+          <span class="author">Ken Sasaki</span>
+          <span class="dot"></span>
+          <span>Il y a un jour</span>
+        </div>
+      </article>
+
+      <article class="review review--b reveal" style="--delay: .1s;">
+        <p class="review__quote">Super expérience, l'équipe est au top, super accueillante. Un grand 10/10 comme pour la cuisine. Terrasse extérieure très agréable en été, rien à redire !</p>
+        <div class="review__meta">
+          <span class="review__stars" aria-label="Note 5 sur 5">★★★★★</span>
+          <span class="dot"></span>
+          <span class="author">Romain BA</span>
+          <span class="dot"></span>
+          <span>Il y a une semaine</span>
+        </div>
+      </article>
+
+      <article class="review review--c reveal" style="--delay: .15s;">
+        <p class="review__quote">Un super moment passé pour mon anniversaire. Nous avons très bien mangé, le service était au top et sympathique. Merci !</p>
+        <div class="review__meta">
+          <span class="review__stars" aria-label="Note 5 sur 5">★★★★★</span>
+          <span class="dot"></span>
+          <span class="author">Steph Bozec</span>
+          <span class="dot"></span>
+          <span>Il y a 5 jours</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="avis__footer reveal">
+      <p class="avis__rating"><strong>4,7</strong> sur Google <span style="opacity:.5">·</span> 370 avis vérifiés</p>
+      <a href="https://share.google/k8fCfIfjuv42vgwk3" class="cta" target="_blank" rel="noopener" style="color: var(--ink);">Lire tous les avis sur Google</a>
     </div>
   </div>
 </section>
 
-<section class="chiffres">
+<section class="reserver" id="reserver">
   <div class="wrap">
-    <div class="chiffres__grid">
-      <div class="chiffre-card reveal">
-        <p class="chiffre-card__num">4<em>,7</em></p>
-        <p class="chiffre-card__label">sur Google · 370 avis vérifiés</p>
+    <span class="reserver__eye">N° 02 · Une table vous attend</span>
+    <h2 class="reveal">Réserver<br><em data-reservation-moment>ce soir.</em></h2>
+    <div class="reserver__actions reveal" style="--delay: .15s;">
+      <a href="tel:+33231816191" class="btn-primary">Appeler le restaurant</a>
+      <a href="#contact" class="btn-ghost">Voir les horaires</a>
+    </div>
+  </div>
+</section>
+
+<section class="carnet" id="carnet">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="num">N° 03</span>
+      <div class="titles">
+        <h2>Le carnet <em>de bord.</em></h2>
+        <p>Quelques images prises en cuisine, en salle, sur le port. Un aperçu du quotidien de la maison.</p>
       </div>
-      <div class="chiffre-card reveal" style="--delay: .08s;">
-        <p class="chiffre-card__num">100<em>%</em></p>
-        <p class="chiffre-card__label">poissons et fruits de mer de Normandie</p>
+    </div>
+
+    <div class="carnet__grid">
+      <div class="tile tile--1 reveal">
+        <picture>
+          <source srcset="assets/table_terrasse.webp" type="image/webp">
+          <img src="assets/table_terrasse.jpeg" alt="Table en terrasse" loading="lazy">
+        </picture>
       </div>
-      <div class="chiffre-card reveal" style="--delay: .16s;">
-        <p class="chiffre-card__num">6<em>j</em></p>
-        <p class="chiffre-card__label">sur 7, midi et soir, depuis 2024</p>
+      <div class="tile tile--2 reveal" style="--delay: .1s;">
+        <picture>
+          <source srcset="assets/saumon.webp" type="image/webp">
+          <img src="assets/saumon.jpeg" alt="Saumon rôti" loading="lazy">
+        </picture>
       </div>
-      <div class="chiffre-card reveal" style="--delay: .24s;">
-        <p class="chiffre-card__num">N°<em>4</em></p>
-        <p class="chiffre-card__label">rue de la Ville · Vieux Bassin, Honfleur</p>
+      <div class="tile tile--3 reveal" style="--delay: .15s;">
+        <picture>
+          <source srcset="assets/desserts.webp" type="image/webp">
+          <img src="assets/desserts.jpeg" alt="Desserts de la maison" loading="lazy">
+        </picture>
+      </div>
+      <div class="tile tile--4 reveal" style="--delay: .2s;">
+        <picture>
+          <source srcset="assets/salade_de_la_mer.webp" type="image/webp">
+          <img src="assets/salade_de_la_mer.jpeg" alt="Salade de la mer" loading="lazy">
+        </picture>
+      </div>
+      <div class="tile tile--5 reveal" style="--delay: .05s;">
+        <picture>
+          <source srcset="assets/plateau_de_fruit_de_mer.webp" type="image/webp">
+          <img src="assets/plateau_de_fruit_de_mer.jpeg" alt="Plateau de fruits de mer" loading="lazy">
+        </picture>
+      </div>
+      <div class="tile tile--6 reveal" style="--delay: .1s;">
+        <picture>
+          <source srcset="assets/tarte_tatin.webp" type="image/webp">
+          <img src="assets/tarte_tatin.jpeg" alt="Tarte tatin" loading="lazy">
+        </picture>
       </div>
     </div>
   </div>
@@ -433,7 +502,7 @@
 <section class="carte" id="carte">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="num">N° 02</span>
+      <span class="num">N° 04</span>
       <div class="titles">
         <h2>La carte <em>change avec la marée.</em></h2>
         <p>Quatre plats en photo, mais la carte va bien au delà : banc d'écailler et plateaux, moules trois façons, viandes normandes, desserts maison. À découvrir en salle ou dans la carte complète ci-dessous.</p>
@@ -502,7 +571,7 @@
   <div class="equipage__glow" aria-hidden="true"></div>
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="num">N° 03</span>
+      <span class="num">N° 05</span>
       <div class="titles">
         <h2>L'équipage, <em>à bord.</em></h2>
         <p>Une brigade jeune, réunie autour d'une même idée : que ce qui arrive dans l'assiette ait été pêché, cuisiné, pensé le jour même. Aux commandes, Jade et Paul, la vingtaine. Autour d'eux, une équipe soudée qui partage la même exigence.</p>
@@ -525,121 +594,6 @@
           <span>La brigade<em>Cuisine · salle · cave</em></span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="carnet" id="carnet">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="num">N° 04</span>
-      <div class="titles">
-        <h2>Le carnet <em>de bord.</em></h2>
-        <p>Quelques images prises en cuisine, en salle, sur le port. Un aperçu du quotidien de la maison.</p>
-      </div>
-    </div>
-
-    <div class="carnet__grid">
-      <div class="tile tile--1 reveal">
-        <picture>
-          <source srcset="assets/table_terrasse.webp" type="image/webp">
-          <img src="assets/table_terrasse.jpeg" alt="Table en terrasse" loading="lazy">
-        </picture>
-      </div>
-      <div class="tile tile--2 reveal" style="--delay: .1s;">
-        <picture>
-          <source srcset="assets/saumon.webp" type="image/webp">
-          <img src="assets/saumon.jpeg" alt="Saumon rôti" loading="lazy">
-        </picture>
-      </div>
-      <div class="tile tile--3 reveal" style="--delay: .15s;">
-        <picture>
-          <source srcset="assets/desserts.webp" type="image/webp">
-          <img src="assets/desserts.jpeg" alt="Desserts de la maison" loading="lazy">
-        </picture>
-      </div>
-      <div class="tile tile--4 reveal" style="--delay: .2s;">
-        <picture>
-          <source srcset="assets/salade_de_la_mer.webp" type="image/webp">
-          <img src="assets/salade_de_la_mer.jpeg" alt="Salade de la mer" loading="lazy">
-        </picture>
-      </div>
-      <div class="tile tile--5 reveal" style="--delay: .05s;">
-        <picture>
-          <source srcset="assets/plateau_de_fruit_de_mer.webp" type="image/webp">
-          <img src="assets/plateau_de_fruit_de_mer.jpeg" alt="Plateau de fruits de mer" loading="lazy">
-        </picture>
-      </div>
-      <div class="tile tile--6 reveal" style="--delay: .1s;">
-        <picture>
-          <source srcset="assets/tarte_tatin.webp" type="image/webp">
-          <img src="assets/tarte_tatin.jpeg" alt="Tarte tatin" loading="lazy">
-        </picture>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="avis" id="avis">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="num">N° 04 · bis</span>
-      <div class="titles">
-        <h2>Ce qu'on en <em>dit.</em></h2>
-        <p>Quelques mots laissés par nos clients sur Google. La maison vit aussi grâce à eux.</p>
-      </div>
-    </div>
-
-    <div class="avis__grid">
-      <article class="review review--a reveal">
-        <p class="review__quote">Cuisine très très bonne ! Personnel super sympathique. Aliments frais et les desserts maison étaient très bons. Je recommande !</p>
-        <div class="review__meta">
-          <span class="review__stars" aria-label="Note 5 sur 5">★★★★★</span>
-          <span class="dot"></span>
-          <span class="author">Ken Sasaki</span>
-          <span class="dot"></span>
-          <span>Il y a un jour</span>
-        </div>
-      </article>
-
-      <article class="review review--b reveal" style="--delay: .1s;">
-        <p class="review__quote">Super expérience, l'équipe est au top, super accueillante. Un grand 10/10 comme pour la cuisine. Terrasse extérieure très agréable en été, rien à redire !</p>
-        <div class="review__meta">
-          <span class="review__stars" aria-label="Note 5 sur 5">★★★★★</span>
-          <span class="dot"></span>
-          <span class="author">Romain BA</span>
-          <span class="dot"></span>
-          <span>Il y a une semaine</span>
-        </div>
-      </article>
-
-      <article class="review review--c reveal" style="--delay: .15s;">
-        <p class="review__quote">Un super moment passé pour mon anniversaire. Nous avons très bien mangé, le service était au top et sympathique. Merci !</p>
-        <div class="review__meta">
-          <span class="review__stars" aria-label="Note 5 sur 5">★★★★★</span>
-          <span class="dot"></span>
-          <span class="author">Steph Bozec</span>
-          <span class="dot"></span>
-          <span>Il y a 5 jours</span>
-        </div>
-      </article>
-    </div>
-
-    <div class="avis__footer reveal">
-      <p class="avis__rating"><strong>4,7</strong> sur Google <span style="opacity:.5">·</span> 370 avis vérifiés</p>
-      <a href="https://share.google/k8fCfIfjuv42vgwk3" class="cta" target="_blank" rel="noopener" style="color: var(--ink);">Lire tous les avis sur Google</a>
-    </div>
-  </div>
-</section>
-
-<section class="reserver" id="reserver">
-  <div class="wrap">
-    <span class="reserver__eye">N° 05 · Une table vous attend</span>
-    <h2 class="reveal">Réserver<br><em data-reservation-moment>ce soir.</em></h2>
-    <div class="reserver__actions reveal" style="--delay: .15s;">
-      <a href="tel:+33231816191" class="btn-primary">Appeler le restaurant</a>
-      <a href="#contact" class="btn-ghost">Voir les horaires</a>
     </div>
   </div>
 </section>
@@ -700,10 +654,10 @@
     <div>
       <h4>Visiter</h4>
       <ul>
-        <li><a href="#lieu">Le lieu</a></li>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#carnet">Le carnet</a></li>
         <li><a href="#carte">La carte</a></li>
         <li><a href="#equipage">L'équipage</a></li>
-        <li><a href="#carnet">Le carnet</a></li>
       </ul>
     </div>
 

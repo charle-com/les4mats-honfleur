@@ -302,11 +302,10 @@
 <header class="site-header" id="siteHeader">
   <a href="./" class="brand"><em>Les</em> 4 Mâts</a>
   <nav class="nav">
-    <a href="#place">The place</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#logbook">Logbook</a>
     <a href="#menu">The menu</a>
     <a href="#crew">The crew</a>
-    <a href="#logbook">Logbook</a>
-    <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
   <a href="#book" class="cta">Book a table</a>
@@ -317,11 +316,10 @@
 <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
   <button class="nav-overlay__close" type="button" aria-label="Close menu"><span></span><span></span></button>
   <div class="nav-overlay__links">
-    <a href="#place">The <em>place</em></a>
+    <a href="#reviews">The <em>reviews</em></a>
+    <a href="#logbook">The <em>logbook</em></a>
     <a href="#menu">The <em>menu</em></a>
     <a href="#crew">The <em>crew</em></a>
-    <a href="#logbook">The <em>logbook</em></a>
-    <a href="#reviews">The <em>reviews</em></a>
     <a href="#contact"><em>Contact</em></a>
     <a href="#book"><em>Book</em></a>
   </div>
@@ -387,52 +385,97 @@
   </div>
 </div>
 
-<section class="concept" id="place">
+<section class="avis" id="reviews">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="num">N° 01</span>
       <div class="titles">
-        <h2>A table <em>on the quay.</em></h2>
-        <p>A stone's throw from the Vieux Bassin, Les 4 Mâts drops anchor between the half-timbered houses and the trawlers' masts. The door stays open, tables grow longer, and the evening stretches a little further than planned.</p>
+        <h2>What they're <em>saying.</em></h2>
+        <p>A few words left by our guests on Google. The house is alive because of them too.</p>
       </div>
     </div>
 
-    <div class="concept__grid">
-      <div class="concept__text reveal">
-        <p>A platter that spills over, a bottle that keeps coming back, the morning catch served that night. <em>Laughter rings brighter in good company.</em></p>
-        <p>No frozen menu. No hiding sauce. Just the produce, the fire, something worth sharing.</p>
-        <p><em>A good meal starts in the kitchen. A good evening always ends in the dining room.</em></p>
-      </div>
-      <div></div>
-      <div class="concept__image reveal" style="--delay: .15s;">
-        <picture>
-          <source srcset="../assets/terrasse_interieure.webp" type="image/webp">
-          <img src="../assets/terrasse_interieure.jpeg" alt="Indoor dining room" loading="lazy">
-        </picture>
-        <span class="caption">Dining room</span>
-      </div>
+    <div class="avis__grid">
+      <article class="review review--a reveal">
+        <p class="review__quote">Had a fantastic family meal here. The staff were excellent (given we didn't speak a lot of French and managed with English and Italian). Food was great, well prepared and tasty. Fish soup is worth trying.</p>
+        <div class="review__meta">
+          <span class="review__stars" aria-label="Rated 5 out of 5">★★★★★</span>
+          <span class="dot"></span>
+          <span class="author">Andrew Robinson</span>
+          <span class="dot"></span>
+          <span>A week ago</span>
+        </div>
+      </article>
+
+      <article class="review review--b reveal" style="--delay: .1s;">
+        <p class="review__quote">What a find. Great family dinner on a recent trip to Honfleur. Quality of food was far beyond expectations. Half crab and prawns to start, absolutely stunning, then the whole turbot with lovely seasonal veg. Put it on your Honfleur dining list.</p>
+        <div class="review__meta">
+          <span class="review__stars" aria-label="Rated 5 out of 5">★★★★★</span>
+          <span class="dot"></span>
+          <span class="author">Trevor Cakebread</span>
+          <span class="dot"></span>
+          <span>6 months ago</span>
+        </div>
+      </article>
+
+      <article class="review review--c reveal" style="--delay: .15s;">
+        <p class="review__quote">A fantastic, family-run restaurant with the freshest, most delicious and elegant meals. A must for any Honfleur experience. Staff are young and upbeat and you will leave with a smile.</p>
+        <div class="review__meta">
+          <span class="review__stars" aria-label="Rated 5 out of 5">★★★★★</span>
+          <span class="dot"></span>
+          <span class="author">Flix Boi</span>
+          <span class="dot"></span>
+          <span>8 months ago</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="avis__footer reveal">
+      <p class="avis__rating"><strong>4.7</strong> on Google <span style="opacity:.5">·</span> 370 verified reviews</p>
+      <a href="https://share.google/k8fCfIfjuv42vgwk3" class="cta" target="_blank" rel="noopener" style="color: var(--ink);">Read all reviews on Google</a>
     </div>
   </div>
 </section>
 
-<section class="chiffres">
+<section class="reserver" id="book">
   <div class="wrap">
-    <div class="chiffres__grid">
-      <div class="chiffre-card reveal">
-        <p class="chiffre-card__num">4<em>.7</em></p>
-        <p class="chiffre-card__label">on Google · 370 verified reviews</p>
+    <span class="reserver__eye">N° 02 · A table awaits you</span>
+    <h2 class="reveal">Book a table<br><em data-reservation-moment>tonight.</em></h2>
+    <div class="reserver__actions reveal" style="--delay: .15s;">
+      <a href="tel:+33231816191" class="btn-primary">Call the restaurant</a>
+      <a href="#contact" class="btn-ghost">See opening hours</a>
+    </div>
+  </div>
+</section>
+
+<section class="carnet" id="logbook">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="num">N° 03</span>
+      <div class="titles">
+        <h2>The <em>logbook.</em></h2>
+        <p>A few frames from the kitchen, the dining room, the port. A glimpse of daily life at the house.</p>
       </div>
-      <div class="chiffre-card reveal" style="--delay: .08s;">
-        <p class="chiffre-card__num">100<em>%</em></p>
-        <p class="chiffre-card__label">Normandy fish and seafood, sourced locally</p>
+    </div>
+
+    <div class="carnet__grid">
+      <div class="tile tile--1 reveal">
+        <picture><source srcset="../assets/table_terrasse.webp" type="image/webp"><img src="../assets/table_terrasse.jpeg" alt="Terrace table" loading="lazy"></picture>
       </div>
-      <div class="chiffre-card reveal" style="--delay: .16s;">
-        <p class="chiffre-card__num">6<em>d</em></p>
-        <p class="chiffre-card__label">a week, lunch and dinner, since 2024</p>
+      <div class="tile tile--2 reveal" style="--delay: .1s;">
+        <picture><source srcset="../assets/saumon.webp" type="image/webp"><img src="../assets/saumon.jpeg" alt="Roasted salmon" loading="lazy"></picture>
       </div>
-      <div class="chiffre-card reveal" style="--delay: .24s;">
-        <p class="chiffre-card__num">N°<em>4</em></p>
-        <p class="chiffre-card__label">rue de la Ville · Vieux Bassin, Honfleur</p>
+      <div class="tile tile--3 reveal" style="--delay: .15s;">
+        <picture><source srcset="../assets/desserts.webp" type="image/webp"><img src="../assets/desserts.jpeg" alt="Desserts" loading="lazy"></picture>
+      </div>
+      <div class="tile tile--4 reveal" style="--delay: .2s;">
+        <picture><source srcset="../assets/salade_de_la_mer.webp" type="image/webp"><img src="../assets/salade_de_la_mer.jpeg" alt="Seafood salad" loading="lazy"></picture>
+      </div>
+      <div class="tile tile--5 reveal" style="--delay: .05s;">
+        <picture><source srcset="../assets/plateau_de_fruit_de_mer.webp" type="image/webp"><img src="../assets/plateau_de_fruit_de_mer.jpeg" alt="Seafood platter" loading="lazy"></picture>
+      </div>
+      <div class="tile tile--6 reveal" style="--delay: .1s;">
+        <picture><source srcset="../assets/tarte_tatin.webp" type="image/webp"><img src="../assets/tarte_tatin.jpeg" alt="Tarte tatin" loading="lazy"></picture>
       </div>
     </div>
   </div>
@@ -441,7 +484,7 @@
 <section class="carte" id="menu">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="num">N° 02</span>
+      <span class="num">N° 04</span>
       <div class="titles">
         <h2>The menu <em>shifts with the tide.</em></h2>
         <p>Four plates in pictures, but the menu goes well beyond: raw bar and seafood platters, mussels three ways, Normandy meats, homemade desserts. Discover the full card in the dining room or download it below.</p>
@@ -510,7 +553,7 @@
   <div class="equipage__glow" aria-hidden="true"></div>
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="num">N° 03</span>
+      <span class="num">N° 05</span>
       <div class="titles">
         <h2>The crew, <em>on board.</em></h2>
         <p>A young brigade, gathered around a single idea: what reaches the plate has been caught, cooked and thought out the same day. Co-founded by Jade and Paul, in their twenties. Around them, a tight-knit team who share the same quiet standard.</p>
@@ -533,106 +576,6 @@
           <span>The crew<em>Kitchen · floor · cellar</em></span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="carnet" id="logbook">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="num">N° 04</span>
-      <div class="titles">
-        <h2>The <em>logbook.</em></h2>
-        <p>A few frames from the kitchen, the dining room, the port. A glimpse of daily life at the house.</p>
-      </div>
-    </div>
-
-    <div class="carnet__grid">
-      <div class="tile tile--1 reveal">
-        <picture><source srcset="../assets/table_terrasse.webp" type="image/webp"><img src="../assets/table_terrasse.jpeg" alt="Terrace table" loading="lazy"></picture>
-      </div>
-      <div class="tile tile--2 reveal" style="--delay: .1s;">
-        <picture><source srcset="../assets/saumon.webp" type="image/webp"><img src="../assets/saumon.jpeg" alt="Roasted salmon" loading="lazy"></picture>
-      </div>
-      <div class="tile tile--3 reveal" style="--delay: .15s;">
-        <picture><source srcset="../assets/desserts.webp" type="image/webp"><img src="../assets/desserts.jpeg" alt="Desserts" loading="lazy"></picture>
-      </div>
-      <div class="tile tile--4 reveal" style="--delay: .2s;">
-        <picture><source srcset="../assets/salade_de_la_mer.webp" type="image/webp"><img src="../assets/salade_de_la_mer.jpeg" alt="Seafood salad" loading="lazy"></picture>
-      </div>
-      <div class="tile tile--5 reveal" style="--delay: .05s;">
-        <picture><source srcset="../assets/plateau_de_fruit_de_mer.webp" type="image/webp"><img src="../assets/plateau_de_fruit_de_mer.jpeg" alt="Seafood platter" loading="lazy"></picture>
-      </div>
-      <div class="tile tile--6 reveal" style="--delay: .1s;">
-        <picture><source srcset="../assets/tarte_tatin.webp" type="image/webp"><img src="../assets/tarte_tatin.jpeg" alt="Tarte tatin" loading="lazy"></picture>
-      </div>
-      <div class="tile tile--7 reveal" style="--delay: .15s;">
-        <picture><source srcset="../assets/terrasse_interieure.webp" type="image/webp"><img src="../assets/terrasse_interieure.jpeg" alt="Dining room" loading="lazy"></picture>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="avis" id="reviews">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="num">N° 04 · bis</span>
-      <div class="titles">
-        <h2>What they're <em>saying.</em></h2>
-        <p>A few words left by our guests on Google. The house is alive because of them too.</p>
-      </div>
-    </div>
-
-    <div class="avis__grid">
-      <article class="review review--a reveal">
-        <p class="review__quote">Had a fantastic family meal here. The staff were excellent (given we didn't speak a lot of French and managed with English and Italian). Food was great, well prepared and tasty. Fish soup is worth trying.</p>
-        <div class="review__meta">
-          <span class="review__stars" aria-label="Rated 5 out of 5">★★★★★</span>
-          <span class="dot"></span>
-          <span class="author">Andrew Robinson</span>
-          <span class="dot"></span>
-          <span>A week ago</span>
-        </div>
-      </article>
-
-      <article class="review review--b reveal" style="--delay: .1s;">
-        <p class="review__quote">What a find. Great family dinner on a recent trip to Honfleur. Quality of food was far beyond expectations. Half crab and prawns to start, absolutely stunning, then the whole turbot with lovely seasonal veg. Put it on your Honfleur dining list.</p>
-        <div class="review__meta">
-          <span class="review__stars" aria-label="Rated 5 out of 5">★★★★★</span>
-          <span class="dot"></span>
-          <span class="author">Trevor Cakebread</span>
-          <span class="dot"></span>
-          <span>6 months ago</span>
-        </div>
-      </article>
-
-      <article class="review review--c reveal" style="--delay: .15s;">
-        <p class="review__quote">A fantastic, family-run restaurant with the freshest, most delicious and elegant meals. A must for any Honfleur experience. Staff are young and upbeat and you will leave with a smile.</p>
-        <div class="review__meta">
-          <span class="review__stars" aria-label="Rated 5 out of 5">★★★★★</span>
-          <span class="dot"></span>
-          <span class="author">Flix Boi</span>
-          <span class="dot"></span>
-          <span>8 months ago</span>
-        </div>
-      </article>
-    </div>
-
-    <div class="avis__footer reveal">
-      <p class="avis__rating"><strong>4.7</strong> on Google <span style="opacity:.5">·</span> 370 verified reviews</p>
-      <a href="https://share.google/k8fCfIfjuv42vgwk3" class="cta" target="_blank" rel="noopener" style="color: var(--ink);">Read all reviews on Google</a>
-    </div>
-  </div>
-</section>
-
-<section class="reserver" id="book">
-  <div class="wrap">
-    <span class="reserver__eye">N° 05 · A table awaits you</span>
-    <h2 class="reveal">Book a table<br><em data-reservation-moment>tonight.</em></h2>
-    <div class="reserver__actions reveal" style="--delay: .15s;">
-      <a href="tel:+33231816191" class="btn-primary">Call the restaurant</a>
-      <a href="#contact" class="btn-ghost">See opening hours</a>
     </div>
   </div>
 </section>
@@ -693,10 +636,10 @@
     <div>
       <h4>Visit</h4>
       <ul>
-        <li><a href="#place">The place</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#logbook">Logbook</a></li>
         <li><a href="#menu">The menu</a></li>
         <li><a href="#crew">The crew</a></li>
-        <li><a href="#logbook">Logbook</a></li>
       </ul>
     </div>
 

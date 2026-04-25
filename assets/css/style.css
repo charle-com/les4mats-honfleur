@@ -126,12 +126,15 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
   color: var(--cream-hi);
-  transition: padding 0.4s var(--ease);
+  transition: padding 0.4s var(--ease), background 0.4s var(--ease), backdrop-filter 0.4s var(--ease);
 }
 .site-header.scrolled {
   padding: 12px var(--gutter);
+  background: rgba(10, 20, 28, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 .brand {
   font-family: var(--ff-display);
@@ -241,7 +244,7 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
   position: absolute; inset: 0;
   z-index: 1;
   background:
-    linear-gradient(180deg, rgba(15,26,34,0.45) 0%, rgba(15,26,34,0.05) 28%, rgba(15,26,34,0.45) 62%, rgba(15,26,34,0.84) 100%),
+    linear-gradient(180deg, rgba(15,26,34,0.68) 0%, rgba(15,26,34,0.05) 28%, rgba(15,26,34,0.45) 62%, rgba(15,26,34,0.84) 100%),
     radial-gradient(ellipse at 70% 20%, rgba(78,0,0,0.12), transparent 55%);
 }
 .hero__content {
@@ -1431,6 +1434,24 @@ body.menu-open .nav-overlay {
   .chiffre-card:last-child { border-bottom: 0; }
   .recrute .wrap { grid-template-columns: 1fr; gap: 40px; }
   .recrute__head { position: static; }
+}
+
+@media (min-width: 961px) and (max-width: 1080px) {
+  .hero__title { font-size: clamp(80px, 12vw, 150px); }
+  .carte__grid { gap: 16px; }
+  .equipage__grid { gap: 40px; }
+  .site-header { padding: 18px var(--gutter); }
+}
+
+@media (min-width: 641px) and (max-width: 820px) {
+  .hero { min-height: 680px; }
+  .hero__title { font-size: clamp(72px, 14vw, 120px); }
+  .carnet__grid { grid-auto-rows: 80px; }
+  .equipage__image { max-height: 480px; }
+  .avis__grid { grid-template-columns: 1fr; gap: 32px; }
+  .review--a, .review--b, .review--c { grid-column: 1 / -1 !important; margin-top: 0 !important; }
+  .contact__grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact__map { aspect-ratio: 4/3; order: -1; }
 }
 
 @media (max-width: 640px) {
