@@ -393,9 +393,10 @@ section { position: relative; padding: clamp(80px, 10vw, 160px) 0; }
 }
 .concept__grid {
   display: grid;
-  grid-template-columns: 5fr 1fr 6fr;
+  grid-template-columns: 1fr;
   gap: 40px;
   align-items: start;
+  max-width: 52ch;
 }
 .concept__text p {
   font-family: var(--ff-display);
